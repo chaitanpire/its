@@ -2,7 +2,7 @@
  * learnerModel.js
  * Implements the Weighted Moving Average (WMA) mastery model.
  *
- * M_new = (0.7 × S_recent) + (0.3 × M_current)
+ * M_new = (0.3 × S_recent) + (0.7 × M_current)
  *
  * Scoring:
  *   1.0  → correct on first attempt
@@ -77,7 +77,7 @@ export function buildInitialLearnerState() {
  * @returns {number} new mastery score, clamped [0–1]
  */
 export function updateMastery(currentMastery, recentScore) {
-  const newMastery = 0.7 * recentScore + 0.3 * currentMastery;
+  const newMastery = 0.3 * recentScore + 0.7 * currentMastery;
   return Math.max(0, Math.min(1, newMastery));
 }
 

@@ -231,7 +231,7 @@ export function useLearnerState() {
     const question = currentQuestions[currentQuestionIndex];
     if (!question) return null;
     const hints = HINT_SCAFFOLDS[question.id];
-    if (!hints) return null;
+    if (!hints) return level === 1 ? (question.hint || null) : null;
     return hints[`L${level}`] || null;
   }, [currentQuestions, currentQuestionIndex]);
 

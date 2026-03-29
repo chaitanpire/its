@@ -10,6 +10,7 @@ export const ASSESSMENT_BANK = {
       id: 'K01_Q1',
       difficulty: 1,
       stem: 'Which of the following is a variable in the expression: 14 − 3y?',
+      hint: 'The expression has 14, 3, and y — which of those is a letter?',
       correct: 'y',
       options: ['y', '3', '14', '14 − 3'],
       errorTags: {
@@ -28,6 +29,7 @@ export const ASSESSMENT_BANK = {
       id: 'K01_Q2',
       difficulty: 1,
       stem: 'In the expression 5 + n, what is the constant?',
+      hint: 'In 5 + n, one part is a plain number and one part is a letter — only the plain number is a constant.',
       correct: '5',
       options: ['5', 'n', '5 + n', 'There is no constant'],
       errorTags: {
@@ -46,6 +48,7 @@ export const ASSESSMENT_BANK = {
       id: 'K01_Q3',
       difficulty: 2,
       stem: 'How many variables are in the expression: 3a + 2b − 7?',
+      hint: 'Scan the expression for letters: count a and b separately — do not count the number 7.',
       correct: '2',
       options: ['2', '3', '1', '0'],
       errorTags: {
@@ -64,6 +67,7 @@ export const ASSESSMENT_BANK = {
       id: 'K01_Q4',
       difficulty: 3,
       stem: 'Write an expression for: "A number decreased by 12"',
+      hint: '"Decreased by 12" means subtract 12 FROM the number — the number you start with comes first.',
       correct: 'n − 12',
       options: ['n − 12', '12 − n', 'n + 12', '12n'],
       errorTags: {
@@ -82,6 +86,7 @@ export const ASSESSMENT_BANK = {
       id: 'K01_Q5',
       difficulty: 1,
       stem: 'In the expression 2p − 9, which symbol is the variable?',
+      hint: 'Look at 2p: 2 is the multiplier and p is the letter — which is the variable?',
       correct: 'p',
       options: ['p', '2', '9', '2p'],
       errorTags: {
@@ -100,6 +105,7 @@ export const ASSESSMENT_BANK = {
       id: 'K01_Q6',
       difficulty: 1,
       stem: 'What does a variable represent in an algebraic expression?',
+      hint: 'The word "variable" comes from "vary" — ask yourself: can this symbol change its value?',
       correct: 'An unknown or changing quantity',
       options: ['An unknown or changing quantity', 'A fixed number', 'A mathematical operation', 'The answer to the problem'],
       errorTags: {
@@ -118,6 +124,7 @@ export const ASSESSMENT_BANK = {
       id: 'K01_Q7',
       difficulty: 1,
       stem: 'Which of the following is NOT a variable?',
+      hint: 'Three options are letters used in algebra — look for the one that is a plain number.',
       correct: '9',
       options: ['9', 'x', 'n', 't'],
       errorTags: {
@@ -136,6 +143,7 @@ export const ASSESSMENT_BANK = {
       id: 'K01_Q8',
       difficulty: 2,
       stem: 'How many constants are in the expression: 5x − 3 + 2y?',
+      hint: 'In 5x − 3 + 2y, only the number that has NO variable beside it counts as a constant.',
       correct: '1',
       options: ['1', '2', '3', '0'],
       errorTags: {
@@ -154,6 +162,7 @@ export const ASSESSMENT_BANK = {
       id: 'K01_Q9',
       difficulty: 2,
       stem: 'Which expression has exactly ONE variable and ONE constant?',
+      hint: 'Check each option: count letters for variables and isolated numbers for constants — you need exactly one of each.',
       correct: 'n + 7',
       options: ['n + 7', 'a + b', '3', 'xy − 2'],
       errorTags: {
@@ -172,6 +181,7 @@ export const ASSESSMENT_BANK = {
       id: 'K01_Q10',
       difficulty: 2,
       stem: 'In the expression 10 − k + 4, name ALL the constants.',
+      hint: 'In 10 − k + 4, two of the three parts are plain numbers — name them both.',
       correct: '10 and 4',
       options: ['10 and 4', '10 only', '4 only', 'k'],
       errorTags: {
@@ -190,6 +200,7 @@ export const ASSESSMENT_BANK = {
       id: 'K01_Q11',
       difficulty: 2,
       stem: 'True or False: In p + q − 5, there are two variables and one constant.',
+      hint: 'Count the letters (p, q) and the standalone numbers (−5) in p + q − 5 separately.',
       correct: 'True',
       options: ['True', 'False — there are two constants', 'False — there are three variables', 'False — there are no constants'],
       errorTags: {
@@ -208,6 +219,7 @@ export const ASSESSMENT_BANK = {
       id: 'K01_Q12',
       difficulty: 3,
       stem: 'An expression has exactly 3 variables and 2 constants. Which of the following qualifies?',
+      hint: 'Count letters first — you need exactly 3. Then count isolated numbers — you need exactly 2.',
       correct: 'a + b − c + 4 − 1',
       options: ['a + b − c + 4 − 1', 'x + 2 + 3', 'p + q + 5', 'a + b + c − 7'],
       errorTags: {
@@ -226,6 +238,7 @@ export const ASSESSMENT_BANK = {
       id: 'K01_Q13',
       difficulty: 3,
       stem: 'Which expression represents: "the sum of a number x and the square of another number y, minus 8"?',
+      hint: '"The square of y" means y gets the exponent 2 — make sure it is y squared, not x squared.',
       correct: 'x + y² − 8',
       options: ['x + y² − 8', 'x² + y − 8', '(x + y)² − 8', 'xy − 8'],
       errorTags: {
@@ -244,6 +257,7 @@ export const ASSESSMENT_BANK = {
       id: 'K01_Q14',
       difficulty: 3,
       stem: 'In 3r − 4s + 7, which statement is completely correct?',
+      hint: 'Letters are variables, numbers glued to letters are coefficients, and lone numbers are constants.',
       correct: 'r and s are variables; 3 and 4 are coefficients; 7 is a constant',
       options: [
         'r and s are variables; 3 and 4 are coefficients; 7 is a constant',
@@ -270,6 +284,7 @@ export const ASSESSMENT_BANK = {
       id: 'K02_Q1',
       difficulty: 1,
       stem: 'What is the coefficient of x in: x + 7?',
+      hint: 'x + 7 shows x with no number written in front — what is the invisible coefficient of x?',
       correct: '1',
       options: ['1', '0', '7', 'x'],
       errorTags: {
@@ -288,6 +303,7 @@ export const ASSESSMENT_BANK = {
       id: 'K02_Q2',
       difficulty: 1,
       stem: 'How many terms are in: 4x² − 3x + 7?',
+      hint: 'Split 4x² − 3x + 7 at each + or − sign — how many separate pieces do you get?',
       correct: '3',
       options: ['3', '2', '4', '1'],
       errorTags: {
@@ -306,6 +322,7 @@ export const ASSESSMENT_BANK = {
       id: 'K02_Q3',
       difficulty: 2,
       stem: 'In −5y + 2, what is the coefficient of y?',
+      hint: 'In −5y + 2, the minus sign belongs to the 5, not just to the term — include it in the coefficient.',
       correct: '−5',
       options: ['−5', '5', '2', '−1'],
       errorTags: {
@@ -324,6 +341,7 @@ export const ASSESSMENT_BANK = {
       id: 'K02_Q4',
       difficulty: 3,
       stem: 'Which expression has THREE terms with a leading coefficient of 4?',
+      hint: 'The leading coefficient sits on the term with the highest exponent — look for the option that starts with 4x².',
       correct: '4x² − 2x + 1',
       options: ['4x² − 2x + 1', '4x − 2', '4x²', '2x² + 4x − 1'],
       errorTags: {
@@ -345,6 +363,7 @@ export const ASSESSMENT_BANK = {
       id: 'K02_Q5',
       difficulty: 1,
       stem: 'What is the coefficient of y in: 6y?',
+      hint: 'In 6y, the number 6 sits directly in front of y — that number is the coefficient.',
       correct: '6',
       options: ['6', 'y', '1', '0'],
       errorTags: {
@@ -364,6 +383,7 @@ export const ASSESSMENT_BANK = {
       id: 'K02_Q6',
       difficulty: 1,
       stem: 'How many terms are in: 2a + 3b?',
+      hint: 'Separate 2a + 3b at the + sign — how many distinct pieces do you have?',
       correct: '2',
       options: ['2', '3', '1', '0'],
       errorTags: {
@@ -383,6 +403,7 @@ export const ASSESSMENT_BANK = {
       id: 'K02_Q7',
       difficulty: 2,
       stem: 'What is the coefficient of x in: −x?',
+      hint: '−x means −1 × x; the negative sign is part of the coefficient, not separate from it.',
       correct: '−1',
       options: ['−1', '1', '0', 'x'],
       errorTags: {
@@ -402,6 +423,7 @@ export const ASSESSMENT_BANK = {
       id: 'K02_Q8',
       difficulty: 2,
       stem: 'Which expression has exactly TWO terms?',
+      hint: 'Count parts separated by + or −; you need the option that splits into exactly two such parts.',
       correct: '3x + 4',
       options: ['3x + 4', '5x² + 3x + 1', '7', '2x'],
       errorTags: {
@@ -421,6 +443,7 @@ export const ASSESSMENT_BANK = {
       id: 'K02_Q9',
       difficulty: 2,
       stem: 'What is the leading coefficient in: 7x³ − 2x + 5?',
+      hint: 'The leading term has the highest power; in 7x³ − 2x + 5, which term carries the biggest exponent?',
       correct: '7',
       options: ['7', '−2', '5', '3'],
       errorTags: {
@@ -440,6 +463,7 @@ export const ASSESSMENT_BANK = {
       id: 'K02_Q10',
       difficulty: 2,
       stem: 'In 9 − 2x, how many terms are there?',
+      hint: 'Split 9 − 2x at the minus sign: one piece is 9, the other piece is 2x.',
       correct: '2',
       options: ['2', '1', '3', '0'],
       errorTags: {
@@ -459,6 +483,7 @@ export const ASSESSMENT_BANK = {
       id: 'K02_Q11',
       difficulty: 3,
       stem: 'Which expression has a leading coefficient of −3?',
+      hint: 'The leading coefficient sits on the x² term — which option has −3 directly in front of x²?',
       correct: '−3x² + 2x − 1',
       options: ['−3x² + 2x − 1', '3x² − 2x + 1', '−2x² + 3x − 1', 'x² − 3x + 1'],
       errorTags: {
@@ -478,6 +503,7 @@ export const ASSESSMENT_BANK = {
       id: 'K02_Q12',
       difficulty: 3,
       stem: 'How many terms are in: x² + 3x − 4 + y?',
+      hint: 'Split x² + 3x − 4 + y at every + and − and count each separate piece.',
       correct: '4',
       options: ['4', '3', '2', '1'],
       errorTags: {
@@ -499,6 +525,7 @@ export const ASSESSMENT_BANK = {
       id: 'K03_Q1',
       difficulty: 1,
       stem: 'Evaluate 4a − 2 when a = 3.',
+      hint: 'Replace a with 3: you get 4 × 3 − 2. Do the multiplication before the subtraction.',
       correct: '10',
       options: ['10', '4', '14', '6'],
       errorTags: {
@@ -517,6 +544,7 @@ export const ASSESSMENT_BANK = {
       id: 'K03_Q2',
       difficulty: 2,
       stem: 'If m = 5, what is 3m + m − 2?',
+      hint: 'Replace every m with 5: 3 × 5 + 5 − 2. Multiply first, then add, then subtract.',
       correct: '18',
       options: ['18', '13', '8', '20'],
       errorTags: {
@@ -535,6 +563,7 @@ export const ASSESSMENT_BANK = {
       id: 'K03_Q3',
       difficulty: 2,
       stem: 'Evaluate 2x² + 3 when x = 4',
+      hint: 'Square x first: 4² = 16. Then multiply by 2 to get 32. Then add 3.',
       correct: '35',
       options: ['35', '131', '19', '64'],
       errorTags: {
@@ -553,6 +582,7 @@ export const ASSESSMENT_BANK = {
       id: 'K03_Q4',
       difficulty: 3,
       stem: 'If n = −2, evaluate: n² − 3n + 5',
+      hint: '(−2)² is positive — squaring removes the negative. Work out each term individually before adding.',
       correct: '15',
       options: ['15', '3', '−5', '7'],
       errorTags: {
@@ -574,6 +604,7 @@ export const ASSESSMENT_BANK = {
       id: 'K03_Q5',
       difficulty: 1,
       stem: 'Evaluate 5x when x = 2.',
+      hint: 'Replace x with 2 in 5x: that gives 5 × 2. What is 5 × 2?',
       correct: '10',
       options: ['10', '7', '25', '3'],
       errorTags: {
@@ -593,6 +624,7 @@ export const ASSESSMENT_BANK = {
       id: 'K03_Q6',
       difficulty: 1,
       stem: 'Evaluate x + 6 when x = 4.',
+      hint: 'Swap x for 4 in x + 6: the expression becomes 4 + 6.',
       correct: '10',
       options: ['10', '24', '2', '6'],
       errorTags: {
@@ -612,6 +644,7 @@ export const ASSESSMENT_BANK = {
       id: 'K03_Q7',
       difficulty: 2,
       stem: 'Evaluate 3a + 2 when a = 4.',
+      hint: 'Replace a with 4 in 3a + 2: first compute 3 × 4, then add 2 to the result.',
       correct: '14',
       options: ['14', '20', '12', '6'],
       errorTags: {
@@ -631,6 +664,7 @@ export const ASSESSMENT_BANK = {
       id: 'K03_Q8',
       difficulty: 2,
       stem: 'Evaluate 6 − 2x when x = 2.',
+      hint: 'Replace x with 2 in 6 − 2x: first compute 2 × 2 = 4, then subtract 4 from 6.',
       correct: '2',
       options: ['2', '8', '−2', '12'],
       errorTags: {
@@ -650,6 +684,7 @@ export const ASSESSMENT_BANK = {
       id: 'K03_Q9',
       difficulty: 2,
       stem: 'Evaluate 2(x + 3) when x = 5.',
+      hint: 'Replace x with 5 inside the brackets first: 5 + 3 = 8. Then multiply the whole bracket result by 2.',
       correct: '16',
       options: ['16', '13', '10', '25'],
       errorTags: {
@@ -669,6 +704,7 @@ export const ASSESSMENT_BANK = {
       id: 'K03_Q10',
       difficulty: 3,
       stem: 'Evaluate x² − 4 when x = −3.',
+      hint: 'Substitute x = −3 and square it: (−3)² = 9 (positive). Then subtract 4.',
       correct: '5',
       options: ['5', '−13', '9', '−5'],
       errorTags: {
@@ -688,6 +724,7 @@ export const ASSESSMENT_BANK = {
       id: 'K03_Q11',
       difficulty: 3,
       stem: 'Evaluate 3x² − 2x when x = 2.',
+      hint: 'Replace x with 2 in 3x²: that is 3 × (2²) = 3 × 4 = 12. Then subtract 2 × 2 from 12.',
       correct: '8',
       options: ['8', '12', '4', '16'],
       errorTags: {
@@ -707,6 +744,7 @@ export const ASSESSMENT_BANK = {
       id: 'K03_Q12',
       difficulty: 3,
       stem: 'Evaluate 2x² + 3x − 1 when x = −1.',
+      hint: 'With x = −1: (−1)² = 1 (positive) and 3 × (−1) = −3. Work out each term before combining.',
       correct: '−2',
       options: ['−2', '2', '4', '−4'],
       errorTags: {
@@ -728,6 +766,7 @@ export const ASSESSMENT_BANK = {
       id: 'K04_Q1',
       difficulty: 1,
       stem: 'Which term is a like term to 5x²?',
+      hint: 'A like term to 5x² must have x with the same exponent of 2 — check both the variable and the power.',
       correct: '−2x²',
       options: ['−2x²', '5x', '2x³', '5y²'],
       errorTags: {
@@ -746,6 +785,7 @@ export const ASSESSMENT_BANK = {
       id: 'K04_Q2',
       difficulty: 1,
       stem: 'Which pair are like terms?',
+      hint: 'Both terms must share the same letter AND the same exponent — look for two terms with just plain x.',
       correct: '3x and −5x',
       options: ['3x and −5x', '3x and 3y', 'x² and x', '2xy and 2x'],
       errorTags: {
@@ -764,6 +804,7 @@ export const ASSESSMENT_BANK = {
       id: 'K04_Q3',
       difficulty: 2,
       stem: 'In the expression 3a + 2b − a + 5b, how many distinct like-term groups are there?',
+      hint: 'Group 3a with −a (both use a) and 2b with 5b (both use b) — that gives you two distinct groups.',
       correct: '2',
       options: ['2', '4', '3', '1'],
       errorTags: {
@@ -782,6 +823,7 @@ export const ASSESSMENT_BANK = {
       id: 'K04_Q4',
       difficulty: 3,
       stem: 'True or False: 3xy² and 5x²y are like terms',
+      hint: 'In 3xy², x has power 1 and y has power 2. In 5x²y, what power is on x and what power is on y?',
       correct: 'False',
       options: ['False', 'True', 'Sometimes', 'Only if x=y'],
       errorTags: {
@@ -803,6 +845,7 @@ export const ASSESSMENT_BANK = {
       id: 'K04_Q5',
       difficulty: 1,
       stem: 'Which is a like term to 7y?',
+      hint: 'A like term to 7y needs y to the first power — check that the exponent on y matches exactly.',
       correct: '−3y',
       options: ['−3y', '7y²', '7x', '3xy'],
       errorTags: {
@@ -822,6 +865,7 @@ export const ASSESSMENT_BANK = {
       id: 'K04_Q6',
       difficulty: 1,
       stem: 'Which pair are NOT like terms?',
+      hint: 'Three options share the same letter; only one option pairs different letters — that is NOT a like pair.',
       correct: '4x and 4y',
       options: ['4x and 4y', '2a and 5a', '−3x and x', '7y and −2y'],
       errorTags: {
@@ -841,6 +885,7 @@ export const ASSESSMENT_BANK = {
       id: 'K04_Q7',
       difficulty: 2,
       stem: 'Which of the following are like terms?',
+      hint: 'Both terms must have x with the same exponent; check whether the powers of x match in each option.',
       correct: '5x² and −3x²',
       options: ['5x² and −3x²', '5x² and 5x', 'x² and y²', '2xy and 2x'],
       errorTags: {
@@ -860,6 +905,7 @@ export const ASSESSMENT_BANK = {
       id: 'K04_Q8',
       difficulty: 2,
       stem: 'How many like-term groups are in: x + y + x² + y²?',
+      hint: 'x and x² are different exponents; y and y² are different too — each unique type is its own group.',
       correct: '4',
       options: ['4', '2', '3', '1'],
       errorTags: {
@@ -879,6 +925,7 @@ export const ASSESSMENT_BANK = {
       id: 'K04_Q9',
       difficulty: 2,
       stem: 'Which term is like 6ab?',
+      hint: 'A like term to 6ab must have both a AND b with the same powers — neither variable can be missing.',
       correct: '−2ab',
       options: ['−2ab', '6a', '6b', 'ab²'],
       errorTags: {
@@ -898,6 +945,7 @@ export const ASSESSMENT_BANK = {
       id: 'K04_Q10',
       difficulty: 3,
       stem: 'Which expression contains ONLY like terms?',
+      hint: 'Every term must carry the same variable with the same power — check for any mixed variables or exponents.',
       correct: '2x + 3x − 5x',
       options: ['2x + 3x − 5x', 'x + y + x', 'x² + x + x²', 'xy + x + y'],
       errorTags: {
@@ -917,6 +965,7 @@ export const ASSESSMENT_BANK = {
       id: 'K04_Q11',
       difficulty: 3,
       stem: 'Which pair are like terms?',
+      hint: 'In 4x²y, x has power 2 and y has power 1 — a like term must have exactly that same pattern.',
       correct: '4x²y and −3x²y',
       options: ['4x²y and −3x²y', '4x²y and 4xy²', 'x²y and xy', 'xy and yx²'],
       errorTags: {
@@ -936,6 +985,7 @@ export const ASSESSMENT_BANK = {
       id: 'K04_Q12',
       difficulty: 3,
       stem: 'True or False: 2x²y and 2y x² are like terms',
+      hint: 'Multiplication is commutative: 2x²y = 2yx². The order of letters written never changes the term.',
       correct: 'True',
       options: ['True', 'False', 'Sometimes', 'Only if x=1'],
       errorTags: {
@@ -957,6 +1007,7 @@ export const ASSESSMENT_BANK = {
       id: 'K05_Q1',
       difficulty: 1,
       stem: 'Simplify: 3m + 4n − m',
+      hint: 'Only m-terms combine: 3m − m = ? The 4n stays separate because n is a different letter.',
       correct: '2m + 4n',
       options: ['2m + 4n', '6mn', '7mn', '3m + 3n'],
       errorTags: {
@@ -975,6 +1026,7 @@ export const ASSESSMENT_BANK = {
       id: 'K05_Q2',
       difficulty: 2,
       stem: 'Simplify: 5x + 2x − 3 + 4',
+      hint: 'Group the x-terms (5x + 2x) and the constants (−3 + 4) separately before combining.',
       correct: '7x + 1',
       options: ['7x + 1', '8x + 1', '7x − 1', '7x + 7'],
       errorTags: {
@@ -993,6 +1045,7 @@ export const ASSESSMENT_BANK = {
       id: 'K05_Q3',
       difficulty: 2,
       stem: 'Simplify: 4a + 2b − 2a + b − 3',
+      hint: 'a-terms: 4a − 2a = 2a. b-terms: 2b + b = 3b. The −3 has no like term, so it stays.',
       correct: '2a + 3b − 3',
       options: ['2a + 3b − 3', '2a + 3b + 3', '4a + 3b − 3', '6ab − 3'],
       errorTags: {
@@ -1011,6 +1064,7 @@ export const ASSESSMENT_BANK = {
       id: 'K05_Q4',
       difficulty: 3,
       stem: 'Simplify: 3x² + 2x − x² − 5x + 4',
+      hint: 'Handle three separate groups: (3x² − x²), (2x − 5x), and (4). Simplify each one.',
       correct: '2x² − 3x + 4',
       options: ['2x² − 3x + 4', '2x² + 7x + 4', '4x² − 3x + 4', '2x² − 3x − 4'],
       errorTags: {
@@ -1032,6 +1086,7 @@ export const ASSESSMENT_BANK = {
       id: 'K05_Q5',
       difficulty: 1,
       stem: 'Simplify: 6x − 2x',
+      hint: 'Subtract the coefficients: 6 − 2 = 4. Keep the variable x attached to the result.',
       correct: '4x',
       options: ['4x', '8x', '12x', '4'],
       errorTags: {
@@ -1051,6 +1106,7 @@ export const ASSESSMENT_BANK = {
       id: 'K05_Q6',
       difficulty: 1,
       stem: 'Simplify: 2y + 3y',
+      hint: 'Add the coefficients: 2 + 3 = 5. The letter y stays the same.',
       correct: '5y',
       options: ['5y', '6y', '5', 'y'],
       errorTags: {
@@ -1070,6 +1126,7 @@ export const ASSESSMENT_BANK = {
       id: 'K05_Q7',
       difficulty: 2,
       stem: 'Simplify: 7a − 3a + 2',
+      hint: 'Combine the a-terms: 7a − 3a = 4a. The constant +2 is not an a-term, so it stays.',
       correct: '4a + 2',
       options: ['4a + 2', '10a + 2', '4a − 2', '9a'],
       errorTags: {
@@ -1089,6 +1146,7 @@ export const ASSESSMENT_BANK = {
       id: 'K05_Q8',
       difficulty: 2,
       stem: 'Simplify: 5x + 2 − 3x + 4',
+      hint: 'Pair the x-terms: 5x − 3x = 2x. Pair the constants: 2 + 4 = 6.',
       correct: '2x + 6',
       options: ['2x + 6', '8x + 6', '2x + 2', '6x + 6'],
       errorTags: {
@@ -1108,6 +1166,7 @@ export const ASSESSMENT_BANK = {
       id: 'K05_Q9',
       difficulty: 2,
       stem: 'Simplify: 3x + 4y + 2x − y',
+      hint: 'x-terms: 3x + 2x = 5x. y-terms: 4y − y = 3y. Never mix x-terms with y-terms.',
       correct: '5x + 3y',
       options: ['5x + 3y', '7xy', '5x + 5y', 'x + 3y'],
       errorTags: {
@@ -1127,6 +1186,7 @@ export const ASSESSMENT_BANK = {
       id: 'K05_Q10',
       difficulty: 3,
       stem: 'Simplify: 2x² + 3x² − x²',
+      hint: 'All three terms have x²: add and subtract only the coefficients — 2 + 3 − 1 = 4.',
       correct: '4x²',
       options: ['4x²', '6x²', '2x²', '4x'],
       errorTags: {
@@ -1146,6 +1206,7 @@ export const ASSESSMENT_BANK = {
       id: 'K05_Q11',
       difficulty: 3,
       stem: 'Simplify: x² + 2x + x² − x',
+      hint: 'Pair x² terms: x² + x² = 2x². Pair x terms: 2x − x = x. Keep the exponents straight.',
       correct: '2x² + x',
       options: ['2x² + x', '3x² + x', '2x² + 3x', 'x² + x'],
       errorTags: {
@@ -1165,6 +1226,7 @@ export const ASSESSMENT_BANK = {
       id: 'K05_Q12',
       difficulty: 3,
       stem: 'Simplify: 4a + 3 − 2a − 5',
+      hint: 'Pair a-terms: 4a − 2a = 2a. Pair constants: 3 − 5 = −2. Write both results.',
       correct: '2a − 2',
       options: ['2a − 2', '2a + 2', '6a − 2', '2a − 8'],
       errorTags: {
@@ -1186,6 +1248,7 @@ export const ASSESSMENT_BANK = {
       id: 'K06_Q1',
       difficulty: 1,
       stem: 'Which of the following is an EQUATION?',
+      hint: 'Scan each option for an equals sign (=) — only one option has it.',
       correct: 'x − 4 = 10',
       options: ['x − 4 = 10', 'x − 14', '2x + 5', 'x²'],
       errorTags: {
@@ -1204,6 +1267,7 @@ export const ASSESSMENT_BANK = {
       id: 'K06_Q2',
       difficulty: 1,
       stem: 'What is the key difference between an expression and an equation?',
+      hint: 'Think of the one symbol an expression never has but an equation always needs.',
       correct: 'An equation has an equals sign',
       options: [
         'An equation has an equals sign',
@@ -1227,6 +1291,7 @@ export const ASSESSMENT_BANK = {
       id: 'K06_Q3',
       difficulty: 2,
       stem: 'Which statement correctly classifies: 2x + 3 = 2x + 3?',
+      hint: 'Both sides are identical — any value of x satisfies it. That is different from "no solution".',
       correct: 'It is an equation (always true for all values of x)',
       options: [
         'It is an equation (always true for all values of x)',
@@ -1250,6 +1315,7 @@ export const ASSESSMENT_BANK = {
       id: 'K06_Q4',
       difficulty: 3,
       stem: 'You can "solve" which of the following?',
+      hint: 'You can only find the value of x when two things are stated as equal.',
       correct: '3x − 5 = 10',
       options: ['3x − 5 = 10', '3x − 5', '3x', '5'],
       errorTags: {
@@ -1271,6 +1337,7 @@ export const ASSESSMENT_BANK = {
       id: 'K06_Q5',
       difficulty: 1,
       stem: 'Which of the following is NOT an equation?',
+      hint: 'Look for the option with no equals sign — that one is an expression, not an equation.',
       correct: '2x + 7',
       options: ['2x + 7', 'x = 5', '3 + 4 = 7', 'y − 2 = 0'],
       errorTags: {
@@ -1290,6 +1357,7 @@ export const ASSESSMENT_BANK = {
       id: 'K06_Q6',
       difficulty: 1,
       stem: 'Which of these is an expression?',
+      hint: 'An expression has no equals sign; three of these options contain one.',
       correct: '5x + 3',
       options: ['5x + 3', 'x = 3', '2 + 3 = 5', 'y − 1 = 0'],
       errorTags: {
@@ -1309,6 +1377,7 @@ export const ASSESSMENT_BANK = {
       id: 'K06_Q7',
       difficulty: 2,
       stem: 'Which of the following has exactly one solution?',
+      hint: 'One solution means exactly one x works — look for the option that is neither always true nor never true.',
       correct: '2x + 3 = 7',
       options: ['2x + 3 = 7', 'x + 1 = x + 1', '3 = 5', '2x + 3'],
       errorTags: {
@@ -1328,6 +1397,7 @@ export const ASSESSMENT_BANK = {
       id: 'K06_Q8',
       difficulty: 2,
       stem: 'Which of these is always true?',
+      hint: 'An identity holds for every value of x — look for the equation where both sides are always the same.',
       correct: 'x + 2 = x + 2',
       options: ['x + 2 = x + 2', 'x + 2 = x + 3', '2x = x', 'x = 5'],
       errorTags: {
@@ -1347,6 +1417,7 @@ export const ASSESSMENT_BANK = {
       id: 'K06_Q9',
       difficulty: 2,
       stem: 'Which statement is FALSE?',
+      hint: 'You can simplify an expression; you cannot solve it for a specific numerical answer.',
       correct: 'Expressions can be solved',
       options: [
         'Expressions can be solved',
@@ -1371,6 +1442,7 @@ export const ASSESSMENT_BANK = {
       id: 'K06_Q10',
       difficulty: 3,
       stem: 'Which of the following is an identity?',
+      hint: 'An identity is true for all values of x, not just one — both sides must always match.',
       correct: 'x + 5 = x + 5',
       options: ['x + 5 = x + 5', 'x + 5 = x + 6', '2x = x', 'x = 3'],
       errorTags: {
@@ -1390,6 +1462,7 @@ export const ASSESSMENT_BANK = {
       id: 'K06_Q11',
       difficulty: 3,
       stem: 'Which of the following has NO solution?',
+      hint: 'Cancel x from both sides mentally — if you are left with a false statement like 2 = 5, there is no solution.',
       correct: 'x + 2 = x + 5',
       options: ['x + 2 = x + 5', 'x + 2 = x + 2', '2x = 6', 'x = 3'],
       errorTags: {
@@ -1409,6 +1482,7 @@ export const ASSESSMENT_BANK = {
       id: 'K06_Q12',
       difficulty: 3,
       stem: 'Which statement is correct?',
+      hint: 'Think of an equation like x + 2 = x + 5 (none), x = x (infinite), and 2x = 6 (one) — all are valid.',
       correct: 'Equations can have one, none, or infinite solutions',
       options: [
         'Equations can have one, none, or infinite solutions',
@@ -1435,6 +1509,7 @@ export const ASSESSMENT_BANK = {
       id: 'K07_Q1',
       difficulty: 1,
       stem: 'If you add 5 to the LEFT side of an equation, what must you do to the RIGHT side?',
+      hint: 'Think of a balanced scale: adding 5 grams to one side requires adding 5 grams to the other side too.',
       correct: 'Add 5',
       options: ['Add 5', 'Subtract 5', 'Multiply by 5', 'Do nothing'],
       errorTags: {
@@ -1453,6 +1528,7 @@ export const ASSESSMENT_BANK = {
       id: 'K07_Q2',
       difficulty: 1,
       stem: 'The equals sign in an equation is like:',
+      hint: 'Imagine equal weights on both sides of a pivot point — the = sign holds both sides in balance.',
       correct: 'The pivot of a balanced scale',
       options: [
         'The pivot of a balanced scale',
@@ -1476,6 +1552,7 @@ export const ASSESSMENT_BANK = {
       id: 'K07_Q3',
       difficulty: 2,
       stem: 'If you MULTIPLY both sides of x = 3 by 4, what do you get?',
+      hint: 'Multiply BOTH sides by 4: the left side becomes 4 times x, and the right side becomes 4 times 3.',
       correct: '4x = 12',
       options: ['4x = 12', 'x = 12', '4x = 3', 'x + 4 = 7'],
       errorTags: {
@@ -1494,6 +1571,7 @@ export const ASSESSMENT_BANK = {
       id: 'K07_Q4',
       difficulty: 3,
       stem: 'You divide the LEFT side of an equation by 3 but multiply the RIGHT by 3. The equation is now:',
+      hint: 'Dividing by 3 and multiplying by 3 are opposite operations — applying them to different sides is not the same.',
       correct: 'Unbalanced (broken)',
       options: [
         'Unbalanced (broken)',
@@ -1520,6 +1598,7 @@ export const ASSESSMENT_BANK = {
       id: 'K07_Q5',
       difficulty: 1,
       stem: 'If you subtract 2 from both sides of an equation, what happens?',
+      hint: 'Subtracting 2 from both the left and right sides keeps them equal — the relationship does not change.',
       correct: 'The equation remains balanced',
       options: [
         'The equation remains balanced',
@@ -1544,6 +1623,7 @@ export const ASSESSMENT_BANK = {
       id: 'K07_Q6',
       difficulty: 1,
       stem: 'What happens if you add different numbers to each side of an equation?',
+      hint: 'Adding 7 to one side and 3 to the other side unbalances the equation — the sides are no longer equal.',
       correct: 'The equation becomes unbalanced',
       options: [
         'The equation becomes unbalanced',
@@ -1568,6 +1648,7 @@ export const ASSESSMENT_BANK = {
       id: 'K07_Q7',
       difficulty: 2,
       stem: 'If x = 5, what happens when you subtract 3 from both sides?',
+      hint: 'Subtract 3 from x on the left (x − 3) and subtract 3 from 5 on the right (5 − 3 = 2).',
       correct: 'x − 3 = 2',
       options: ['x − 3 = 2', 'x = 2', 'x − 3 = 5', 'x = 8'],
       errorTags: {
@@ -1587,6 +1668,7 @@ export const ASSESSMENT_BANK = {
       id: 'K07_Q8',
       difficulty: 2,
       stem: 'Which operation keeps an equation balanced?',
+      hint: 'The golden rule: whatever operation you apply to one side must be applied identically to the other.',
       correct: 'Doing the same operation on both sides',
       options: [
         'Doing the same operation on both sides',
@@ -1611,6 +1693,7 @@ export const ASSESSMENT_BANK = {
       id: 'K07_Q9',
       difficulty: 2,
       stem: 'If you divide both sides of 2x = 10 by 2, what do you get?',
+      hint: 'Divide both 2x and 10 by 2: the 2 on the left cancels to leave x, and the right becomes 10 ÷ 2.',
       correct: 'x = 5',
       options: ['x = 5', '2x = 5', 'x = 10', 'x = 20'],
       errorTags: {
@@ -1630,6 +1713,7 @@ export const ASSESSMENT_BANK = {
       id: 'K07_Q10',
       difficulty: 3,
       stem: 'Which action will break an equation?',
+      hint: 'Three options apply the same change to both sides — only one changes just one side.',
       correct: 'Adding 3 to one side only',
       options: [
         'Adding 3 to one side only',
@@ -1654,6 +1738,7 @@ export const ASSESSMENT_BANK = {
       id: 'K07_Q11',
       difficulty: 3,
       stem: 'If 3x = 9, what happens if you divide only the right side by 3?',
+      hint: 'Dividing only the right side (9 ÷ 3 = 3) leaves the left side (3x) untouched — they no longer balance.',
       correct: 'Equation becomes incorrect',
       options: [
         'Equation becomes incorrect',
@@ -1678,6 +1763,7 @@ export const ASSESSMENT_BANK = {
       id: 'K07_Q12',
       difficulty: 3,
       stem: 'Why must both sides of an equation be treated equally?',
+      hint: 'Equality means both sides represent the same value — any unequal change destroys that balance.',
       correct: 'To maintain equality',
       options: [
         'To maintain equality',
@@ -1704,6 +1790,7 @@ export const ASSESSMENT_BANK = {
       id: 'K08_Q1',
       difficulty: 1,
       stem: 'Solve: x + 7 = 15',
+      hint: 'To cancel the +7, subtract 7 from both sides: x = 15 − 7.',
       correct: 'x = 8',
       options: ['x = 8', 'x = 22', 'x = 7', 'x = 15'],
       errorTags: {
@@ -1722,6 +1809,7 @@ export const ASSESSMENT_BANK = {
       id: 'K08_Q2',
       difficulty: 1,
       stem: 'Solve: y − 4 = 10',
+      hint: 'To cancel the −4, add 4 to both sides: y = 10 + 4.',
       correct: 'y = 14',
       options: ['y = 14', 'y = 6', 'y = 40', 'y = −6'],
       errorTags: {
@@ -1740,6 +1828,7 @@ export const ASSESSMENT_BANK = {
       id: 'K08_Q3',
       difficulty: 2,
       stem: 'Solve: 15 = n + 8',
+      hint: 'The n is on the right: 15 = n + 8. Subtract 8 from both sides to isolate n.',
       correct: 'n = 7',
       options: ['n = 7', 'n = 23', 'n = 8', 'n = −7'],
       errorTags: {
@@ -1758,6 +1847,7 @@ export const ASSESSMENT_BANK = {
       id: 'K08_Q4',
       difficulty: 3,
       stem: 'Solve: x + (−3) = −10',
+      hint: 'x + (−3) is the same as x − 3. Add 3 to both sides, then compute −10 + 3.',
       correct: 'x = −7',
       options: ['x = −7', 'x = −13', 'x = 7', 'x = 13'],
       errorTags: {
@@ -1779,6 +1869,7 @@ export const ASSESSMENT_BANK = {
       id: 'K08_Q5',
       difficulty: 1,
       stem: 'Solve: x + 5 = 9',
+      hint: 'To remove the +5, subtract 5 from both sides: x = 9 − 5.',
       correct: 'x = 4',
       options: ['x = 4', 'x = 14', 'x = 5', 'x = 9'],
       errorTags: {
@@ -1798,6 +1889,7 @@ export const ASSESSMENT_BANK = {
       id: 'K08_Q6',
       difficulty: 1,
       stem: 'Solve: z − 6 = 2',
+      hint: 'To cancel the −6, add 6 to both sides: z = 2 + 6.',
       correct: 'z = 8',
       options: ['z = 8', 'z = −4', 'z = 12', 'z = 6'],
       errorTags: {
@@ -1817,6 +1909,7 @@ export const ASSESSMENT_BANK = {
       id: 'K08_Q7',
       difficulty: 2,
       stem: 'Solve: x − 9 = 3',
+      hint: 'To undo the −9, add 9 to both sides: x = 3 + 9.',
       correct: 'x = 12',
       options: ['x = 12', 'x = −6', 'x = 6', 'x = 9'],
       errorTags: {
@@ -1836,6 +1929,7 @@ export const ASSESSMENT_BANK = {
       id: 'K08_Q8',
       difficulty: 2,
       stem: 'Solve: 20 = x − 5',
+      hint: 'x is on the right side: 20 = x − 5. Add 5 to both sides to isolate x.',
       correct: 'x = 25',
       options: ['x = 25', 'x = 15', 'x = −25', 'x = 5'],
       errorTags: {
@@ -1855,6 +1949,7 @@ export const ASSESSMENT_BANK = {
       id: 'K08_Q9',
       difficulty: 2,
       stem: 'Solve: x + 12 = 5',
+      hint: 'Subtract 12 from both sides: x = 5 − 12. That subtraction gives a negative answer.',
       correct: 'x = −7',
       options: ['x = −7', 'x = 7', 'x = 17', 'x = −17'],
       errorTags: {
@@ -1874,6 +1969,7 @@ export const ASSESSMENT_BANK = {
       id: 'K08_Q10',
       difficulty: 3,
       stem: 'Solve: x − (−4) = 10',
+      hint: 'x − (−4) equals x + 4. Subtract 4 from both sides: x = 10 − 4.',
       correct: 'x = 6',
       options: ['x = 6', 'x = 14', 'x = −6', 'x = −14'],
       errorTags: {
@@ -1893,6 +1989,7 @@ export const ASSESSMENT_BANK = {
       id: 'K08_Q11',
       difficulty: 3,
       stem: 'Solve: −3 + x = −10',
+      hint: 'The −3 is added to x. Add 3 to both sides to cancel it: x = −10 + 3.',
       correct: 'x = −7',
       options: ['x = −7', 'x = 7', 'x = −13', 'x = 13'],
       errorTags: {
@@ -1912,6 +2009,7 @@ export const ASSESSMENT_BANK = {
       id: 'K08_Q12',
       difficulty: 3,
       stem: 'Solve: x + 0 = 9',
+      hint: 'Adding 0 to any number leaves it unchanged — what does that tell you about x?',
       correct: 'x = 9',
       options: ['x = 9', 'x = 0', 'x = 1', 'x = −9'],
       errorTags: {
@@ -1933,6 +2031,7 @@ export const ASSESSMENT_BANK = {
       id: 'K09_Q1',
       difficulty: 1,
       stem: 'Solve: 4y = 20',
+      hint: 'To undo multiplying by 4, divide both sides by 4: y = 20 ÷ 4.',
       correct: 'y = 5',
       options: ['y = 5', 'y = 80', 'y = 24', 'y = 16'],
       errorTags: {
@@ -1951,6 +2050,7 @@ export const ASSESSMENT_BANK = {
       id: 'K09_Q2',
       difficulty: 1,
       stem: 'Solve: m/3 = 6',
+      hint: 'To undo dividing by 3, multiply both sides by 3: m = 6 × 3.',
       correct: 'm = 18',
       options: ['m = 18', 'm = 2', 'm = 9', 'm = 3'],
       errorTags: {
@@ -1969,6 +2069,7 @@ export const ASSESSMENT_BANK = {
       id: 'K09_Q3',
       difficulty: 2,
       stem: 'Solve: −5p = 30',
+      hint: 'Divide both sides by −5. Positive ÷ negative gives a negative answer.',
       correct: 'p = −6',
       options: ['p = −6', 'p = 6', 'p = −150', 'p = 25'],
       errorTags: {
@@ -1987,6 +2088,7 @@ export const ASSESSMENT_BANK = {
       id: 'K09_Q4',
       difficulty: 3,
       stem: 'Solve: x/−2 = 7',
+      hint: 'Multiply both sides by −2. Remember: 7 × (−2) — what sign does the result have?',
       correct: 'x = −14',
       options: ['x = −14', 'x = 14', 'x = −9', 'x = 3.5'],
       errorTags: {
@@ -2008,6 +2110,7 @@ export const ASSESSMENT_BANK = {
       id: 'K09_Q5',
       difficulty: 1,
       stem: 'Solve: 6x = 42',
+      hint: 'To undo multiplying by 6, divide both sides by 6: x = 42 ÷ 6.',
       correct: 'x = 7',
       options: ['x = 7', 'x = 48', 'x = 36', 'x = 6'],
       errorTags: {
@@ -2027,6 +2130,7 @@ export const ASSESSMENT_BANK = {
       id: 'K09_Q6',
       difficulty: 1,
       stem: 'Solve: x/5 = 3',
+      hint: 'To undo dividing by 5, multiply both sides by 5: x = 3 × 5.',
       correct: 'x = 15',
       options: ['x = 15', 'x = 8', 'x = 3', 'x = 5'],
       errorTags: {
@@ -2046,6 +2150,7 @@ export const ASSESSMENT_BANK = {
       id: 'K09_Q7',
       difficulty: 2,
       stem: 'Solve: 8y = −32',
+      hint: 'Divide both sides by 8. The right side is −32 — is −32 ÷ 8 positive or negative?',
       correct: 'y = −4',
       options: ['y = −4', 'y = 4', 'y = −24', 'y = 24'],
       errorTags: {
@@ -2065,6 +2170,7 @@ export const ASSESSMENT_BANK = {
       id: 'K09_Q8',
       difficulty: 2,
       stem: 'Solve: x/4 = −6',
+      hint: 'Multiply both sides by 4. The right side is −6 × 4 — positive × negative is negative.',
       correct: 'x = −24',
       options: ['x = −24', 'x = 24', 'x = −2', 'x = −10'],
       errorTags: {
@@ -2084,6 +2190,7 @@ export const ASSESSMENT_BANK = {
       id: 'K09_Q9',
       difficulty: 2,
       stem: 'Solve: −3x = −15',
+      hint: 'Divide both sides by −3. Negative divided by negative gives a positive result.',
       correct: 'x = 5',
       options: ['x = 5', 'x = −5', 'x = 12', 'x = −12'],
       errorTags: {
@@ -2103,6 +2210,7 @@ export const ASSESSMENT_BANK = {
       id: 'K09_Q10',
       difficulty: 3,
       stem: 'Solve: 0.5x = 6',
+      hint: 'Dividing by 0.5 is the same as multiplying by 2, because 1 ÷ 0.5 = 2.',
       correct: 'x = 12',
       options: ['x = 12', 'x = 3', 'x = 6.5', 'x = 18'],
       errorTags: {
@@ -2122,6 +2230,7 @@ export const ASSESSMENT_BANK = {
       id: 'K09_Q11',
       difficulty: 3,
       stem: 'Solve: x/−4 = −3',
+      hint: 'Multiply both sides by −4. Then compute (−3) × (−4) — two negatives give a positive.',
       correct: 'x = 12',
       options: ['x = 12', 'x = −12', 'x = 7', 'x = −7'],
       errorTags: {
@@ -2141,6 +2250,7 @@ export const ASSESSMENT_BANK = {
       id: 'K09_Q12',
       difficulty: 3,
       stem: 'Solve: 10x = 0',
+      hint: 'Ask yourself: what single number times 10 gives exactly 0?',
       correct: 'x = 0',
       options: ['x = 0', 'x = 10', 'x = 1', 'x = −10'],
       errorTags: {
@@ -2162,6 +2272,7 @@ export const ASSESSMENT_BANK = {
       id: 'K10_Q1',
       difficulty: 1,
       stem: 'Solve: p/4 = 2',
+      hint: 'To undo dividing by 4, multiply both sides by 4: p = 2 × 4.',
       correct: 'p = 8',
       options: ['p = 8', 'p = 0.5', 'p = 6', 'p = 2'],
       errorTags: {
@@ -2180,6 +2291,7 @@ export const ASSESSMENT_BANK = {
       id: 'K10_Q2',
       difficulty: 2,
       stem: 'Solve: −x = 9',
+      hint: '−x = 9 means −1 × x = 9. Multiply both sides by −1 to reverse the sign.',
       correct: 'x = −9',
       options: ['x = −9', 'x = 9', 'x = −1', 'x = 1/9'],
       errorTags: {
@@ -2198,6 +2310,7 @@ export const ASSESSMENT_BANK = {
       id: 'K10_Q3',
       difficulty: 2,
       stem: 'Solve: 3 + a = 11',
+      hint: 'The 3 is added to a on the left. Subtract 3 from both sides: a = 11 − 3.',
       correct: 'a = 8',
       options: ['a = 8', 'a = 14', 'a = 11', 'a = 3'],
       errorTags: {
@@ -2216,6 +2329,7 @@ export const ASSESSMENT_BANK = {
       id: 'K10_Q4',
       difficulty: 3,
       stem: 'Solve: 0.5n = 12',
+      hint: '0.5n = 12 means n is divided by 2. Multiply both sides by 2, or divide 12 by 0.5.',
       correct: 'n = 24',
       options: ['n = 24', 'n = 6', 'n = 11.5', 'n = 12.5'],
       errorTags: {
@@ -2237,6 +2351,7 @@ export const ASSESSMENT_BANK = {
       id: 'K10_Q5',
       difficulty: 1,
       stem: 'Solve: 2x = 10',
+      hint: '2x = 10: divide both sides by 2 to isolate x.',
       correct: 'x = 5',
       options: ['x = 5', 'x = 20', 'x = 8', 'x = 2'],
       errorTags: {
@@ -2256,6 +2371,7 @@ export const ASSESSMENT_BANK = {
       id: 'K10_Q6',
       difficulty: 1,
       stem: 'Solve: x − 6 = 4',
+      hint: 'x − 6 = 4: add 6 to both sides to cancel the −6.',
       correct: 'x = 10',
       options: ['x = 10', 'x = −2', 'x = 24', 'x = 6'],
       errorTags: {
@@ -2275,6 +2391,7 @@ export const ASSESSMENT_BANK = {
       id: 'K10_Q7',
       difficulty: 2,
       stem: 'Solve: 5x = −25',
+      hint: '5x = −25: divide both sides by 5. The result inherits the negative sign from −25.',
       correct: 'x = −5',
       options: ['x = −5', 'x = 5', 'x = −20', 'x = 30'],
       errorTags: {
@@ -2294,6 +2411,7 @@ export const ASSESSMENT_BANK = {
       id: 'K10_Q8',
       difficulty: 2,
       stem: 'Solve: x/2 = 7',
+      hint: 'x/2 = 7: multiply both sides by 2 to cancel the division.',
       correct: 'x = 14',
       options: ['x = 14', 'x = 3.5', 'x = 9', 'x = 2'],
       errorTags: {
@@ -2313,6 +2431,7 @@ export const ASSESSMENT_BANK = {
       id: 'K10_Q9',
       difficulty: 2,
       stem: 'Solve: −2x = 8',
+      hint: '−2x = 8: divide both sides by −2. Positive 8 ÷ negative −2 gives a negative answer.',
       correct: 'x = −4',
       options: ['x = −4', 'x = 4', 'x = −10', 'x = 6'],
       errorTags: {
@@ -2332,6 +2451,7 @@ export const ASSESSMENT_BANK = {
       id: 'K10_Q10',
       difficulty: 3,
       stem: 'Solve: 3x = 0',
+      hint: 'Ask: what number times 3 equals 0? Only one value of x satisfies 3x = 0.',
       correct: 'x = 0',
       options: ['x = 0', 'x = 3', 'x = 1', 'x = −3'],
       errorTags: {
@@ -2351,6 +2471,7 @@ export const ASSESSMENT_BANK = {
       id: 'K10_Q11',
       difficulty: 3,
       stem: 'Solve: x/0.5 = 10',
+      hint: 'x/0.5 = 10: multiply both sides by 0.5, or think of dividing 10 by 2.',
       correct: 'x = 5',
       options: ['x = 5', 'x = 20', 'x = 0.5', 'x = 15'],
       errorTags: {
@@ -2370,6 +2491,7 @@ export const ASSESSMENT_BANK = {
       id: 'K10_Q12',
       difficulty: 3,
       stem: 'Solve: −x/2 = 6',
+      hint: '−x/2 = 6: first multiply both sides by 2 → −x = 12. Then multiply both sides by −1.',
       correct: 'x = −12',
       options: ['x = −12', 'x = 12', 'x = −3', 'x = 3'],
       errorTags: {
@@ -2391,6 +2513,7 @@ export const ASSESSMENT_BANK = {
       id: 'K11_Q1',
       difficulty: 1,
       stem: 'Solve: 2x + 1 = 9',
+      hint: 'First subtract 1 from both sides to get 2x = 8, then divide both sides by 2.',
       correct: 'x = 4',
       options: ['x = 4', 'x = 5', 'x = 2', 'x = 10'],
       errorTags: {
@@ -2409,6 +2532,7 @@ export const ASSESSMENT_BANK = {
       id: 'K11_Q2',
       difficulty: 2,
       stem: 'Solve: 2p − 3 = 7',
+      hint: 'Step 1 — add 3 to both sides: 2p = 10. Step 2 — divide both sides by 2.',
       correct: 'p = 5',
       options: ['p = 5', 'p = 2', 'p = 7', 'p = 4'],
       errorTags: {
@@ -2427,6 +2551,7 @@ export const ASSESSMENT_BANK = {
       id: 'K11_Q3',
       difficulty: 2,
       stem: 'Solve: 3n + 2 = 14',
+      hint: 'Step 1 — subtract 2 from both sides: 3n = 12. Step 2 — divide both sides by 3.',
       correct: 'n = 4',
       options: ['n = 4', 'n = 16/3', 'n = 5.3', 'n = 6'],
       errorTags: {
@@ -2445,6 +2570,7 @@ export const ASSESSMENT_BANK = {
       id: 'K11_Q4',
       difficulty: 3,
       stem: 'Solve: 5 − 2x = 11',
+      hint: 'Subtract 5 from both sides first: −2x = 6. Then divide by −2 and notice the sign flips.',
       correct: 'x = −3',
       options: ['x = −3', 'x = 3', 'x = 8', 'x = −8'],
       errorTags: {
@@ -2466,6 +2592,7 @@ export const ASSESSMENT_BANK = {
       id: 'K11_Q5',
       difficulty: 1,
       stem: 'Solve: 3x + 2 = 11',
+      hint: 'Subtract 2 from both sides first: 3x = 9. Then divide both sides by 3.',
       correct: 'x = 3',
       options: ['x = 3', 'x = 9', 'x = 13', 'x = 1'],
       errorTags: {
@@ -2485,6 +2612,7 @@ export const ASSESSMENT_BANK = {
       id: 'K11_Q6',
       difficulty: 1,
       stem: 'Solve: 4x − 4 = 12',
+      hint: 'Add 4 to both sides first: 4x = 16. Then divide both sides by 4.',
       correct: 'x = 4',
       options: ['x = 4', 'x = 3', 'x = 16', 'x = 8'],
       errorTags: {
@@ -2504,6 +2632,7 @@ export const ASSESSMENT_BANK = {
       id: 'K11_Q7',
       difficulty: 2,
       stem: 'Solve: 2x + 5 = 1',
+      hint: 'Subtract 5 from both sides: 2x = 1 − 5 = −4. Then divide both sides by 2.',
       correct: 'x = −2',
       options: ['x = −2', 'x = 2', 'x = −3', 'x = 3'],
       errorTags: {
@@ -2523,6 +2652,7 @@ export const ASSESSMENT_BANK = {
       id: 'K11_Q8',
       difficulty: 2,
       stem: 'Solve: 6x − 2 = 10',
+      hint: 'Add 2 to both sides: 6x = 12. Then divide both sides by 6.',
       correct: 'x = 2',
       options: ['x = 2', 'x = 8', 'x = 12', 'x = 1'],
       errorTags: {
@@ -2542,6 +2672,7 @@ export const ASSESSMENT_BANK = {
       id: 'K11_Q9',
       difficulty: 2,
       stem: 'Solve: 7x + 3 = 3',
+      hint: 'Subtract 3 from both sides: 7x = 0. Then ask: what number times 7 equals 0?',
       correct: 'x = 0',
       options: ['x = 0', 'x = 3', 'x = −3', 'x = 1'],
       errorTags: {
@@ -2561,6 +2692,7 @@ export const ASSESSMENT_BANK = {
       id: 'K11_Q10',
       difficulty: 3,
       stem: 'Solve: 4 − 3x = 1',
+      hint: 'Subtract 4 from both sides: −3x = −3. Then divide by −3 — two negatives give a positive.',
       correct: 'x = 1',
       options: ['x = 1', 'x = −1', 'x = 3', 'x = −3'],
       errorTags: {
@@ -2580,6 +2712,7 @@ export const ASSESSMENT_BANK = {
       id: 'K11_Q11',
       difficulty: 3,
       stem: 'Solve: 2x − 6 = −2',
+      hint: 'Add 6 to both sides: 2x = −2 + 6 = 4. Then divide both sides by 2.',
       correct: 'x = 2',
       options: ['x = 2', 'x = −2', 'x = 4', 'x = −4'],
       errorTags: {
@@ -2599,6 +2732,7 @@ export const ASSESSMENT_BANK = {
       id: 'K11_Q12',
       difficulty: 3,
       stem: 'Solve: 3x + 6 = 0',
+      hint: 'Subtract 6 from both sides: 3x = −6. Then divide by 3 — is the result positive or negative?',
       correct: 'x = −2',
       options: ['x = −2', 'x = 2', 'x = −6', 'x = 6'],
       errorTags: {
@@ -2620,6 +2754,7 @@ export const ASSESSMENT_BANK = {
       id: 'K12_Q1',
       difficulty: 1,
       stem: '"Four less than a number is ten." Which equation represents this?',
+      hint: '"Less than" reverses the order: write n first, then subtract 4. It is n − 4, not 4 − n.',
       correct: 'n − 4 = 10',
       options: ['n − 4 = 10', '4 − n = 10', 'n + 4 = 10', '4n = 10'],
       errorTags: {
@@ -2638,6 +2773,7 @@ export const ASSESSMENT_BANK = {
       id: 'K12_Q2',
       difficulty: 2,
       stem: '"Twice a number, increased by 5, equals 19." Solve for the number.',
+      hint: 'Build the equation first: 2n + 5 = 19. Subtract 5 from both sides before dividing by 2.',
       correct: '7',
       options: ['7', '12', '9.5', '4.75'],
       errorTags: {
@@ -2656,6 +2792,7 @@ export const ASSESSMENT_BANK = {
       id: 'K12_Q3',
       difficulty: 2,
       stem: 'A number tripled, minus 7, equals 11. What is the number?',
+      hint: 'Write 3n − 7 = 11. Add 7 to both sides first: 3n = 18. Then divide by 3.',
       correct: '6',
       options: ['6', '3.3', '4', '14/3'],
       errorTags: {
@@ -2674,6 +2811,7 @@ export const ASSESSMENT_BANK = {
       id: 'K12_Q4',
       difficulty: 3,
       stem: '"A taxi charges ₹40 base plus ₹8 per km. You paid ₹96. How many km did you travel?"',
+      hint: 'Your equation is 40 + 8k = 96. Subtract the 40 base fee first, then divide by 8.',
       correct: '7',
       options: ['7', '17', '12', '6.5'],
       errorTags: {
@@ -2695,6 +2833,7 @@ export const ASSESSMENT_BANK = {
       id: 'K12_Q5',
       difficulty: 1,
       stem: '"Five more than a number is 12." Which equation matches?',
+      hint: '"More than" means add; the unknown comes first: n + 5 = 12.',
       correct: 'n + 5 = 12',
       options: ['n + 5 = 12', '5 − n = 12', 'n − 5 = 12', '5n = 12'],
       errorTags: {
@@ -2714,6 +2853,7 @@ export const ASSESSMENT_BANK = {
       id: 'K12_Q6',
       difficulty: 1,
       stem: '"A number decreased by 3 equals 9." Solve.',
+      hint: '"Decreased by 3" means n − 3 = 9. Add 3 to both sides to solve.',
       correct: '12',
       options: ['12', '6', '3', '−6'],
       errorTags: {
@@ -2733,6 +2873,7 @@ export const ASSESSMENT_BANK = {
       id: 'K12_Q7',
       difficulty: 2,
       stem: '"Twice a number minus 4 equals 10." What is the number?',
+      hint: 'Set up 2n − 4 = 10. Add 4 to both sides first, then divide by 2.',
       correct: '7',
       options: ['7', '3', '5', '14'],
       errorTags: {
@@ -2752,6 +2893,7 @@ export const ASSESSMENT_BANK = {
       id: 'K12_Q8',
       difficulty: 2,
       stem: '"Half a number plus 6 equals 10." Find the number.',
+      hint: 'Set up n/2 + 6 = 10. Subtract 6 from both sides first, then multiply by 2.',
       correct: '8',
       options: ['8', '2', '4', '16'],
       errorTags: {
@@ -2771,6 +2913,7 @@ export const ASSESSMENT_BANK = {
       id: 'K12_Q9',
       difficulty: 2,
       stem: '"Three more than twice a number is 13." Solve.',
+      hint: 'Your equation is 2n + 3 = 13. Subtract 3 first, then divide by 2.',
       correct: '5',
       options: ['5', '10', '8', '4'],
       errorTags: {
@@ -2790,6 +2933,7 @@ export const ASSESSMENT_BANK = {
       id: 'K12_Q10',
       difficulty: 3,
       stem: '"A shop adds ₹20 delivery fee and ₹5 per item. Total bill is ₹70. How many items?"',
+      hint: 'Build: 20 + 5n = 70. Subtract the 20 delivery fee first, then divide by 5.',
       correct: '10',
       options: ['10', '14', '50', '8'],
       errorTags: {
@@ -2809,6 +2953,7 @@ export const ASSESSMENT_BANK = {
       id: 'K12_Q11',
       difficulty: 3,
       stem: '"A number multiplied by 4, then reduced by 6, equals 10. Find the number."',
+      hint: 'Write 4n − 6 = 10. Add 6 to both sides: 4n = 16. Then divide by 4.',
       correct: '4',
       options: ['4', '2', '10', '16'],
       errorTags: {
@@ -2828,6 +2973,7 @@ export const ASSESSMENT_BANK = {
       id: 'K12_Q12',
       difficulty: 3,
       stem: '"A number divided by 3 plus 2 equals 6. Find the number."',
+      hint: 'Write n/3 + 2 = 6. Subtract 2 from both sides: n/3 = 4. Then multiply by 3.',
       correct: '12',
       options: ['12', '2', '18', '6'],
       errorTags: {
@@ -2852,6 +2998,7 @@ export const ASSESSMENT_BANK = {
       id: 'K13_Q1',
       difficulty: 1,
       stem: 'Which expression means "a number decreased by 9"?',
+      hint: '"Decreased by 9" means subtract 9 FROM the number — n comes first: n − 9.',
       correct: 'n − 9',
       options: ['n − 9', '9 − n', 'n + 9', '9n'],
       errorTags: {
@@ -2870,6 +3017,7 @@ export const ASSESSMENT_BANK = {
       id: 'K13_Q2',
       difficulty: 1,
       stem: 'Which expression means "twice a number, increased by 5"?',
+      hint: '"Twice" gives you 2n; "increased by 5" then adds 5 after the multiplication: 2n + 5.',
       correct: '2n + 5',
       options: ['2n + 5', '2(n + 5)', '2n − 5', 'n + 5'],
       errorTags: {
@@ -2888,6 +3036,7 @@ export const ASSESSMENT_BANK = {
       id: 'K13_Q3',
       difficulty: 2,
       stem: 'Write an expression for: "the product of 4 and a number, decreased by 7".',
+      hint: '"Product of 4 and n" is 4n; "decreased by 7" subtracts 7 from that product: 4n − 7.',
       correct: '4n − 7',
       options: ['4n − 7', '7 − 4n', '4(n − 7)', '4n + 7'],
       errorTags: {
@@ -2906,6 +3055,7 @@ export const ASSESSMENT_BANK = {
       id: 'K13_Q4',
       difficulty: 2,
       stem: 'Which expression represents "three times the sum of a number and 6"?',
+      hint: '"The sum of n and 6" must sit in brackets before being multiplied by 3: 3(n + 6).',
       correct: '3(n + 6)',
       options: ['3(n + 6)', '3n + 6', '3n − 6', 'n + 18'],
       errorTags: {
@@ -2924,6 +3074,7 @@ export const ASSESSMENT_BANK = {
       id: 'K13_Q5',
       difficulty: 1,
       stem: 'Which expression means "a number increased by 7"?',
+      hint: '"Increased by 7" always means add 7 — write n + 7.',
       correct: 'n + 7',
       options: ['n + 7', 'n − 7', '7n', 'n ÷ 7'],
       errorTags: {
@@ -2942,6 +3093,7 @@ export const ASSESSMENT_BANK = {
       id: 'K13_Q6',
       difficulty: 1,
       stem: 'Which expression means "a number divided by 3"?',
+      hint: '"Divided by 3" uses division (÷), not multiplication — the number being divided is n: n ÷ 3.',
       correct: 'n ÷ 3',
       options: ['n ÷ 3', '3n', 'n − 3', 'n + 3'],
       errorTags: {
@@ -2960,6 +3112,7 @@ export const ASSESSMENT_BANK = {
       id: 'K13_Q7',
       difficulty: 1,
       stem: 'Which expression means "four times a number"?',
+      hint: '"Times" means multiply — four times n is written as 4n.',
       correct: '4n',
       options: ['4n', 'n + 4', 'n − 4', 'n ÷ 4'],
       errorTags: {
@@ -2978,6 +3131,7 @@ export const ASSESSMENT_BANK = {
       id: 'K13_Q8',
       difficulty: 2,
       stem: 'Which expression means "five less than twice a number"?',
+      hint: '"Less than" reverses the order: "5 less than 2n" means 2n − 5, not 5 − 2n.',
       correct: '2n − 5',
       options: ['2n − 5', '5 − 2n', '2n + 5', '2(n − 5)'],
       errorTags: {
@@ -2996,6 +3150,7 @@ export const ASSESSMENT_BANK = {
       id: 'K13_Q9',
       difficulty: 2,
       stem: 'Write an expression for: "three more than the product of 6 and a number".',
+      hint: '"Product of 6 and n" comes first (6n), then add 3 for "three more than": 6n + 3.',
       correct: '6n + 3',
       options: ['6n + 3', '6n − 3', '6(n + 3)', '3n + 6'],
       errorTags: {
@@ -3014,6 +3169,7 @@ export const ASSESSMENT_BANK = {
       id: 'K13_Q10',
       difficulty: 2,
       stem: 'Which expression represents "the sum of a number and 4, all multiplied by 5"?',
+      hint: '"The sum of n and 4" goes in brackets because ALL of it is multiplied by 5: 5(n + 4).',
       correct: '5(n + 4)',
       options: ['5(n + 4)', '5n + 4', '5n + 20', 'n + 20'],
       errorTags: {
@@ -3032,6 +3188,7 @@ export const ASSESSMENT_BANK = {
       id: 'K13_Q11',
       difficulty: 2,
       stem: 'Write an expression for: "the quotient of a number and 4, increased by 6".',
+      hint: '"Quotient of n and 4" is n ÷ 4. Then "increased by 6" adds 6 after the division: n ÷ 4 + 6.',
       correct: 'n ÷ 4 + 6',
       options: ['n ÷ 4 + 6', '(n + 6) ÷ 4', 'n ÷ 10', '4n + 6'],
       errorTags: {
@@ -3050,6 +3207,7 @@ export const ASSESSMENT_BANK = {
       id: 'K13_Q12',
       difficulty: 3,
       stem: 'Write an expression for: "three times the difference of a number and 4".',
+      hint: '"The difference of n and 4" is (n − 4) in brackets so that 3 multiplies the whole difference.',
       correct: '3(n − 4)',
       options: ['3(n − 4)', '3n − 4', '3n − 12', '4 − 3n'],
       errorTags: {
@@ -3068,6 +3226,7 @@ export const ASSESSMENT_BANK = {
       id: 'K13_Q13',
       difficulty: 3,
       stem: 'Which expression represents "twice the sum of a number and 7, decreased by 3"?',
+      hint: '"Twice the sum of n and 7" needs brackets: 2(n + 7). Then the "−3" is applied outside.',
       correct: '2(n + 7) − 3',
       options: ['2(n + 7) − 3', '2n + 7 − 3', '2n + 14 − 3', '2(n + 4)'],
       errorTags: {
@@ -3086,6 +3245,7 @@ export const ASSESSMENT_BANK = {
       id: 'K13_Q14',
       difficulty: 3,
       stem: 'A rectangle has a width of n cm and a length that is 5 more than the width. Write an expression for the perimeter.',
+      hint: 'Width = n and length = n + 5. Perimeter uses TWO widths and TWO lengths: 2n + 2(n + 5).',
       correct: '4n + 10',
       options: ['4n + 10', '2n + 10', '2n + 5', 'n + 5'],
       errorTags: {
@@ -3104,6 +3264,7 @@ export const ASSESSMENT_BANK = {
       id: 'K13_Q15',
       difficulty: 3,
       stem: 'Write an expression for: "eight more than three times the sum of a number and 2".',
+      hint: '"Three times the sum of n and 2" needs brackets: 3(n + 2). Then add 8 outside the brackets.',
       correct: '3(n + 2) + 8',
       options: ['3(n + 2) + 8', '3n + 2 + 8', '3(n + 10)', '3n + 14'],
       errorTags: {
@@ -3128,6 +3289,7 @@ export const ASSESSMENT_BANK = {
       id: 'K14_Q1',
       difficulty: 1,
       stem: 'The expression for a pattern is 3n + 1. What is the value when n = 4?',
+      hint: 'Substitute n = 4 into 3n + 1: first compute 3 × 4 = 12, then add 1.',
       correct: '13',
       options: ['13', '16', '12', '19'],
       errorTags: {
@@ -3146,6 +3308,7 @@ export const ASSESSMENT_BANK = {
       id: 'K14_Q2',
       difficulty: 1,
       stem: 'What is the next term in the pattern: 5, 8, 11, 14, __?',
+      hint: 'Find the gap: 8 − 5 = 3. Then add that gap to the last term: 14 + 3.',
       correct: '17',
       options: ['17', '16', '18', '21'],
       errorTags: {
@@ -3164,6 +3327,7 @@ export const ASSESSMENT_BANK = {
       id: 'K14_Q3',
       difficulty: 2,
       stem: 'Find the algebraic rule for the pattern: 3, 7, 11, 15, ... (where n = 1, 2, 3, 4)',
+      hint: 'The values grow by 4 each time, so the rule is 4n + c. Use n = 1 and value 3 to find c.',
       correct: '4n − 1',
       options: ['4n − 1', '4n + 3', '3n + 4', '4n'],
       errorTags: {
@@ -3182,6 +3346,7 @@ export const ASSESSMENT_BANK = {
       id: 'K14_Q4',
       difficulty: 2,
       stem: 'A pattern follows the rule 5n − 2. What is the 10th term?',
+      hint: 'Substitute n = 10 into 5n − 2: first compute 5 × 10 = 50, then subtract 2.',
       correct: '48',
       options: ['48', '52', '50', '43'],
       errorTags: {
@@ -3200,6 +3365,7 @@ export const ASSESSMENT_BANK = {
       id: 'K14_Q5',
       difficulty: 1,
       stem: 'What is the next term in the pattern: 2, 4, 6, 8, __?',
+      hint: 'Each term is 2 more than the previous one — add 2 to the last term, 8.',
       correct: '10',
       options: ['10', '9', '12', '16'],
       errorTags: {
@@ -3218,6 +3384,7 @@ export const ASSESSMENT_BANK = {
       id: 'K14_Q6',
       difficulty: 1,
       stem: 'The rule for a pattern is 2n. What is the value when n = 5?',
+      hint: 'Substitute n = 5 into 2n: that means 2 × 5, not 2 + 5.',
       correct: '10',
       options: ['10', '7', '25', '3'],
       errorTags: {
@@ -3236,6 +3403,7 @@ export const ASSESSMENT_BANK = {
       id: 'K14_Q7',
       difficulty: 1,
       stem: 'What is the next term in the pattern: 10, 7, 4, 1, __?',
+      hint: 'The sequence is decreasing — find by how much each time, then subtract that amount from 1.',
       correct: '−2',
       options: ['−2', '0', '2', '−1'],
       errorTags: {
@@ -3254,6 +3422,7 @@ export const ASSESSMENT_BANK = {
       id: 'K14_Q8',
       difficulty: 2,
       stem: 'The rule for a pattern is 2n + 3. What is the value when n = 6?',
+      hint: 'Substitute n = 6 into 2n + 3: first compute 2 × 6 = 12, then add 3.',
       correct: '15',
       options: ['15', '18', '21', '11'],
       errorTags: {
@@ -3272,6 +3441,7 @@ export const ASSESSMENT_BANK = {
       id: 'K14_Q9',
       difficulty: 2,
       stem: 'Find the algebraic rule for: 2, 5, 8, 11, ... (where n = 1, 2, 3, 4)',
+      hint: 'The values grow by 3 each step, so the rule is 3n + c. Use n = 1 and value 2 to find c.',
       correct: '3n − 1',
       options: ['3n − 1', '3n + 2', '2n + 3', '3n'],
       errorTags: {
@@ -3290,6 +3460,7 @@ export const ASSESSMENT_BANK = {
       id: 'K14_Q10',
       difficulty: 2,
       stem: 'A pattern follows the rule 4n + 1. What is the 8th term?',
+      hint: 'Substitute n = 8 into 4n + 1: first compute 4 × 8 = 32, then add 1.',
       correct: '33',
       options: ['33', '32', '37', '29'],
       errorTags: {
@@ -3308,6 +3479,7 @@ export const ASSESSMENT_BANK = {
       id: 'K14_Q11',
       difficulty: 2,
       stem: 'A table shows: n = 1 → 6, n = 2 → 9, n = 3 → 12. What is the rule?',
+      hint: 'Values go up by 3, so the rule is 3n + c. Plug in n = 1 and value 6 to solve for c.',
       correct: '3n + 3',
       options: ['3n + 3', '6n', '3n + 6', '2n + 4'],
       errorTags: {
@@ -3326,6 +3498,7 @@ export const ASSESSMENT_BANK = {
       id: 'K14_Q12',
       difficulty: 3,
       stem: 'Find the algebraic rule for: 5, 11, 17, 23, ... (where n = 1, 2, 3, 4)',
+      hint: 'The values grow by 6 each step, so the rule is 6n + c. Use n = 1 and value 5 to find c.',
       correct: '6n − 1',
       options: ['6n − 1', '6n + 5', '5n + 6', '6n'],
       errorTags: {
@@ -3344,6 +3517,7 @@ export const ASSESSMENT_BANK = {
       id: 'K14_Q13',
       difficulty: 3,
       stem: 'A pattern adds 4 each time. The 1st term is 3. What is the 12th term?',
+      hint: 'From term 1 to term 12 you take exactly 11 steps, not 12. Compute 3 + (11 × 4).',
       correct: '47',
       options: ['47', '48', '43', '51'],
       errorTags: {
@@ -3362,6 +3536,7 @@ export const ASSESSMENT_BANK = {
       id: 'K14_Q14',
       difficulty: 3,
       stem: 'The nth term of a pattern is 2n + 1. For what value of n does the term equal 19?',
+      hint: 'Set 2n + 1 = 19. Subtract 1 from both sides to get 2n = 18, then divide by 2.',
       correct: '9',
       options: ['9', '10', '8', '18'],
       errorTags: {
@@ -3380,6 +3555,7 @@ export const ASSESSMENT_BANK = {
       id: 'K14_Q15',
       difficulty: 3,
       stem: 'Pattern A has rule 3n + 2 and Pattern B has rule 5n − 4. For which value of n are they equal?',
+      hint: 'Set the two rules equal: 3n + 2 = 5n − 4. Collect n-terms on one side and numbers on the other.',
       correct: '3',
       options: ['3', '2', '4', '5'],
       errorTags: {
@@ -3404,6 +3580,7 @@ export const ASSESSMENT_BANK = {
       id: 'K15_Q1',
       difficulty: 1,
       stem: 'Expand: 3(x + 4)',
+      hint: 'Multiply 3 by EACH term inside: 3 × x = 3x and 3 × 4 = 12. Both terms get multiplied.',
       correct: '3x + 12',
       options: ['3x + 12', '3x + 4', '3x + 7', 'x + 12'],
       errorTags: {
@@ -3422,6 +3599,7 @@ export const ASSESSMENT_BANK = {
       id: 'K15_Q2',
       difficulty: 1,
       stem: 'Expand: 2(5 − y)',
+      hint: 'Distribute 2 into (5 − y): 2 × 5 = 10 and 2 × (−y) = −2y. The subtraction sign is preserved.',
       correct: '10 − 2y',
       options: ['10 − 2y', '10 − y', '7 − 2y', '10 + 2y'],
       errorTags: {
@@ -3440,6 +3618,7 @@ export const ASSESSMENT_BANK = {
       id: 'K15_Q3',
       difficulty: 2,
       stem: 'Expand and simplify: 4(x + 3) + 2x',
+      hint: 'Expand 4(x + 3) first → 4x + 12. Then add the extra 2x: 4x + 2x = 6x.',
       correct: '6x + 12',
       options: ['6x + 12', '4x + 14', '6x + 3', '4x + 12'],
       errorTags: {
@@ -3458,6 +3637,7 @@ export const ASSESSMENT_BANK = {
       id: 'K15_Q4',
       difficulty: 2,
       stem: 'Expand: 3(2n − 5)',
+      hint: 'Multiply 3 by each term: 3 × 2n = 6n and 3 × (−5) = −15. The negative stays.',
       correct: '6n − 15',
       options: ['6n − 15', '6n − 5', '6n + 15', '5n − 15'],
       errorTags: {
@@ -3476,6 +3656,7 @@ export const ASSESSMENT_BANK = {
       id: 'K15_Q5',
       difficulty: 1,
       stem: 'Expand: 5(a + 2)',
+      hint: 'Distribute 5 into (a + 2): 5 × a = 5a and 5 × 2 = 10.',
       correct: '5a + 10',
       options: ['5a + 10', '5a + 2', '5a + 7', 'a + 10'],
       errorTags: {
@@ -3494,6 +3675,7 @@ export const ASSESSMENT_BANK = {
       id: 'K15_Q6',
       difficulty: 1,
       stem: 'Expand: 4(3 − m)',
+      hint: 'Distribute 4 into (3 − m): 4 × 3 = 12 and 4 × (−m) = −4m. Positive × negative stays negative.',
       correct: '12 − 4m',
       options: ['12 − 4m', '12 − m', '7 − 4m', '12 + 4m'],
       errorTags: {
@@ -3512,6 +3694,7 @@ export const ASSESSMENT_BANK = {
       id: 'K15_Q7',
       difficulty: 1,
       stem: 'Expand: 2(6 + n)',
+      hint: 'Distribute 2 into (6 + n): 2 × 6 = 12 and 2 × n = 2n. Do not just add 2 to the numbers.',
       correct: '12 + 2n',
       options: ['12 + 2n', '8 + 2n', '12 + n', '2n + 6'],
       errorTags: {
@@ -3530,6 +3713,7 @@ export const ASSESSMENT_BANK = {
       id: 'K15_Q8',
       difficulty: 2,
       stem: 'Expand and simplify: 3(x + 2) + 5x',
+      hint: 'Expand 3(x + 2) = 3x + 6, then add the 5x: 3x + 5x = 8x. Keep the +6.',
       correct: '8x + 6',
       options: ['8x + 6', '3x + 11', '8x + 2', '3x + 6'],
       errorTags: {
@@ -3548,6 +3732,7 @@ export const ASSESSMENT_BANK = {
       id: 'K15_Q9',
       difficulty: 2,
       stem: 'Expand and simplify: 2(3n − 4) + n',
+      hint: 'Expand 2(3n − 4) = 6n − 8, then add the lone n: 6n + n = 7n. The −8 stays.',
       correct: '7n − 8',
       options: ['7n − 8', '6n − 3', '7n − 4', '5n − 8'],
       errorTags: {
@@ -3566,6 +3751,7 @@ export const ASSESSMENT_BANK = {
       id: 'K15_Q10',
       difficulty: 2,
       stem: 'Expand: 6(2x + 3)',
+      hint: 'Multiply 6 by each term: 6 × 2x = 12x and 6 × 3 = 18.',
       correct: '12x + 18',
       options: ['12x + 18', '12x + 3', '8x + 9', '12x + 9'],
       errorTags: {
@@ -3584,6 +3770,7 @@ export const ASSESSMENT_BANK = {
       id: 'K15_Q11',
       difficulty: 2,
       stem: 'Expand and simplify: 5(n + 1) − 2n',
+      hint: 'Expand 5(n + 1) = 5n + 5, then subtract 2n: 5n − 2n = 3n. The +5 remains.',
       correct: '3n + 5',
       options: ['3n + 5', '5n + 4', '3n + 1', '7n + 5'],
       errorTags: {
@@ -3602,6 +3789,7 @@ export const ASSESSMENT_BANK = {
       id: 'K15_Q12',
       difficulty: 3,
       stem: 'Expand and simplify: 3(2x + 4) − 2(x + 1)',
+      hint: 'Expand both brackets: 3(2x + 4) = 6x + 12 and 2(x + 1) = 2x + 2. Then subtract the second from the first.',
       correct: '4x + 10',
       options: ['4x + 10', '4x + 14', '8x + 10', '4x + 11'],
       errorTags: {
@@ -3620,6 +3808,7 @@ export const ASSESSMENT_BANK = {
       id: 'K15_Q13',
       difficulty: 3,
       stem: 'Expand and simplify: 4(n − 3) + 2(n + 5)',
+      hint: 'Expand 4(n − 3) = 4n − 12 and 2(n + 5) = 2n + 10. Then add the two results together.',
       correct: '6n − 2',
       options: ['6n − 2', '6n + 2', '6n − 22', '8n − 2'],
       errorTags: {
@@ -3638,6 +3827,7 @@ export const ASSESSMENT_BANK = {
       id: 'K15_Q14',
       difficulty: 3,
       stem: 'Simplify: 5(2x − 1) − 3(x + 2)',
+      hint: 'Expand 5(2x − 1) = 10x − 5 and 3(x + 2) = 3x + 6. Subtract the second expansion from the first.',
       correct: '7x − 11',
       options: ['7x − 11', '7x − 7', '13x − 7', '7x + 11'],
       errorTags: {
@@ -3656,6 +3846,7 @@ export const ASSESSMENT_BANK = {
       id: 'K15_Q15',
       difficulty: 3,
       stem: 'Simplify: 2(3n + 4) − (n − 2)',
+      hint: '−(n − 2) means −1 × (n − 2) = −n + 2 (both signs flip). Add that to 2(3n + 4) = 6n + 8.',
       correct: '5n + 10',
       options: ['5n + 10', '5n + 6', '7n + 6', '5n + 2'],
       errorTags: {

@@ -29,6 +29,57 @@ export const HINT_SCAFFOLDS = {
     L3: '"A number decreased by 12" = n − 12. We start with the unknown (n) and subtract 12 from it.',
   },
 
+  K01_Q5: {
+    L1: 'A variable is always a letter. Numbers — even when attached to a letter — are not variables.',
+    L2: 'In 2p − 9: 2 is a number, p is a letter, 9 is a number. Which of those is the variable?',
+    L3: 'p is the only letter → it is the variable. 2 is the coefficient; 9 is the constant. Answer: p.',
+  },
+  K01_Q6: {
+    L1: 'Think about the word "variable" — it comes from "vary", meaning to change. What can change value?',
+    L2: 'A variable like x can equal 3 today and 7 tomorrow. Is it a fixed number, an operation, or an unknown?',
+    L3: 'Variables represent unknown or changing quantities. 5 is fixed (constant); + is an operation; variables are flexible unknowns.',
+  },
+  K01_Q7: {
+    L1: 'Variables are letters. Constants are plain numbers. One of these options is a number, not a letter.',
+    L2: 'Look at x, n, t, and 9. Three are letters used as unknowns. Which one is just a plain number?',
+    L3: '9 is a plain number — it has a fixed value. x, n, and t are all letters representing unknowns. Answer: 9.',
+  },
+  K01_Q8: {
+    L1: 'Constants are standalone numbers with no variable attached. Coefficients are numbers glued to a variable.',
+    L2: 'In 5x − 3 + 2y: 5 multiplies x (coefficient), 2 multiplies y (coefficient), −3 stands alone. How many standalone numbers?',
+    L3: '5 is attached to x → coefficient. 2 is attached to y → coefficient. −3 has no variable → it is the only constant. Answer: 1.',
+  },
+  K01_Q9: {
+    L1: 'Count the letters (variables) and standalone numbers (constants) in each option separately.',
+    L2: 'You need exactly 1 letter and 1 standalone number. Check each option: a+b (2 letters, 0 numbers), 3 (0 letters, 1 number)…',
+    L3: 'n + 7: n is 1 variable, 7 is 1 constant. Exactly one of each. The other options have too many or too few.',
+  },
+  K01_Q10: {
+    L1: 'A constant is any plain number in the expression with no variable beside it. There may be more than one.',
+    L2: 'Go through each part of 10 − k + 4: 10 is a number, k is a letter, 4 is a number. Which are constants?',
+    L3: '10 has no variable → constant. k is a letter → variable. 4 has no variable → constant. Both 10 and 4 are constants.',
+  },
+  K01_Q11: {
+    L1: 'Count the distinct letters for variables and standalone numbers for constants in p + q − 5.',
+    L2: 'Letters: p and q — that is 2. Standalone numbers: −5 — that is 1. Does the statement match?',
+    L3: 'p and q are 2 variables. −5 is 1 constant. The statement says "two variables and one constant" → True.',
+  },
+  K01_Q12: {
+    L1: 'Count letters for variables and isolated numbers for constants in each option until you find 3 and 2.',
+    L2: 'Check a + b − c + 4 − 1: letters are a, b, c (count = 3). Numbers are 4 and 1 (count = 2). Does that match?',
+    L3: 'a, b, c → 3 variables ✓. 4 and 1 → 2 constants ✓. The other options have wrong counts. Answer: a + b − c + 4 − 1.',
+  },
+  K01_Q13: {
+    L1: '"The square of y" means y gets an exponent of 2. Make sure you square the right variable.',
+    L2: 'Break the phrase: "a number x" → x. "Square of y" → y². "Minus 8" → −8. Now join them.',
+    L3: '"Sum of x and y²" = x + y². "Minus 8" = −8. Full expression: x + y² − 8. Note: it is y² not x².',
+  },
+  K01_Q14: {
+    L1: 'In any algebraic term: the letter is the variable, the number multiplying it is the coefficient, a lone number is a constant.',
+    L2: 'In 3r − 4s + 7: r and s are letters. 3 and 4 multiply letters. 7 stands alone. Classify each.',
+    L3: 'r and s (letters) = variables. 3 and 4 (numbers × letters) = coefficients. 7 (alone) = constant. Full correct statement: r and s are variables; 3 and 4 are coefficients; 7 is a constant.',
+  },
+
   // ──────────── K02 ────────────
   K02_Q1: {
     L1: 'The coefficient is the number directly multiplied by the variable. If no number is written, there\'s a special rule.',
@@ -51,6 +102,47 @@ export const HINT_SCAFFOLDS = {
     L3: '4x² − 2x + 1: 3 terms ✓. Leading term = 4x², coefficient = 4 ✓. This is the answer.',
   },
 
+  K02_Q5: {
+    L1: 'The coefficient is the number written directly in front of the variable.',
+    L2: 'In 6y, the number 6 is sitting right next to y. That number is multiplying y.',
+    L3: '6y means 6 × y. The coefficient of y is 6. Answer: 6.',
+  },
+  K02_Q6: {
+    L1: 'Terms are the separate parts of an expression, divided by + or − signs.',
+    L2: 'Split 2a + 3b at the + sign: first part is 2a, second part is 3b. Count the parts.',
+    L3: '2a is one term. 3b is a second term. Total: 2 terms. Answer: 2.',
+  },
+  K02_Q7: {
+    L1: 'When a variable has a minus sign in front with no number, there is an invisible −1 as the coefficient.',
+    L2: '−x means (−1) × x. The −1 is the coefficient — the negative sign is part of it.',
+    L3: '−x = −1 × x. So the coefficient of x in −x is −1. Answer: −1.',
+  },
+  K02_Q8: {
+    L1: 'Count the parts separated by + or − in each option. You need exactly two parts.',
+    L2: 'Check 3x + 4: two parts (3x and 4). Check 5x² + 3x + 1: three parts. Check 7 and 2x: one part each.',
+    L3: '3x + 4 splits into 3x (one term) and 4 (one term) → exactly 2 terms. Answer: 3x + 4.',
+  },
+  K02_Q9: {
+    L1: 'The leading term is the one with the highest exponent. Its coefficient is the leading coefficient.',
+    L2: 'In 7x³ − 2x + 5: the term with the highest power is 7x³. What is the number in front of x³?',
+    L3: '7x³ has the highest power (3). The number in front is 7. Leading coefficient = 7. Answer: 7.',
+  },
+  K02_Q10: {
+    L1: 'Count the parts of 9 − 2x separated by the − sign.',
+    L2: '9 − 2x has two parts: 9 (a standalone number) and 2x (a variable term). Count them.',
+    L3: 'Part 1: 9 (constant). Part 2: −2x (variable term). Total: 2 terms. Answer: 2.',
+  },
+  K02_Q11: {
+    L1: 'The leading coefficient belongs to the term with the highest power. It must equal −3 (negative!).',
+    L2: 'Look for the option whose first term (highest power) has −3 in front. Check each x² coefficient.',
+    L3: '−3x² + 2x − 1: the first term is −3x², so the leading coefficient is −3 ✓. Answer: −3x² + 2x − 1.',
+  },
+  K02_Q12: {
+    L1: 'Split the expression at every + and − sign and count each piece separately.',
+    L2: 'x² + 3x − 4 + y: split at +, −, +. You get: x², 3x, −4, y. Count the pieces.',
+    L3: 'Piece 1: x². Piece 2: 3x. Piece 3: −4. Piece 4: y. Total: 4 terms. Answer: 4.',
+  },
+
   // ──────────── K03 ────────────
   K03_Q1: {
     L1: 'Substitute the given value for the variable, then use PEMDAS: multiply before subtracting.',
@@ -71,6 +163,47 @@ export const HINT_SCAFFOLDS = {
     L1: 'Substitute n = −2 carefully using parentheses: (−2)² and −3(−2). A negative squared gives positive.',
     L2: '(−2)² = 4 (positive!). −3(−2) = +6 (negative × negative = positive). Now add them with +5.',
     L3: '(−2)² − 3(−2) + 5 = 4 − (−6) + 5 = 4 + 6 + 5 = 15.',
+  },
+
+  K03_Q5: {
+    L1: 'To evaluate, replace the variable with the given number and then calculate.',
+    L2: 'Replace x with 2 in 5x: write 5 × 2. Now multiply.',
+    L3: '5x with x = 2: 5 × 2 = 10. Answer: 10.',
+  },
+  K03_Q6: {
+    L1: 'Substitute the given value for x, then perform the operation shown.',
+    L2: 'Replace x with 4 in x + 6: write 4 + 6. Now add.',
+    L3: 'x + 6 with x = 4: 4 + 6 = 10. Answer: 10.',
+  },
+  K03_Q7: {
+    L1: 'Replace the variable, then follow order of operations — multiply before adding.',
+    L2: 'Replace a with 4 in 3a + 2: write 3 × 4 + 2. Multiply first, then add.',
+    L3: '3(4) + 2 = 12 + 2 = 14. Multiply 3 × 4 first, then add 2. Answer: 14.',
+  },
+  K03_Q8: {
+    L1: 'Substitute x, then use order of operations: handle the multiplication before the subtraction.',
+    L2: 'Replace x with 2 in 6 − 2x: write 6 − 2 × 2. Compute 2 × 2 first.',
+    L3: '6 − 2(2) = 6 − 4 = 2. Multiply 2 × 2 = 4 first, then subtract from 6. Answer: 2.',
+  },
+  K03_Q9: {
+    L1: 'Work inside brackets first, then multiply. That is the order of operations rule.',
+    L2: 'Replace x with 5 inside: 2(5 + 3). Add inside the brackets first: 5 + 3 = ?. Then multiply by 2.',
+    L3: '2(5 + 3) = 2(8) = 16. Brackets first: 5 + 3 = 8. Then × 2 = 16. Answer: 16.',
+  },
+  K03_Q10: {
+    L1: 'A negative number squared is always positive. Apply the exponent before subtracting.',
+    L2: 'Replace x with −3: (−3)² − 4. Compute (−3)² first: negative × negative = positive.',
+    L3: '(−3)² = 9 (positive!). Then 9 − 4 = 5. Answer: 5.',
+  },
+  K03_Q11: {
+    L1: 'Apply the exponent to x first, then multiply by the coefficient, then subtract the second term.',
+    L2: 'Replace x with 2: 3(2²) − 2(2). Work out 2² first, then multiply each term separately.',
+    L3: '2² = 4. Then 3 × 4 = 12. Then 2 × 2 = 4. Finally 12 − 4 = 8. Answer: 8.',
+  },
+  K03_Q12: {
+    L1: 'Substitute x = −1 carefully. Squaring a negative gives positive; multiplying by a negative flips sign.',
+    L2: 'Replace x with −1: 2(−1)² + 3(−1) − 1. Compute (−1)² first, then each term.',
+    L3: '(−1)² = 1. So: 2(1) + 3(−1) − 1 = 2 − 3 − 1 = −2. Answer: −2.',
   },
 
   // ──────────── K04 ────────────
