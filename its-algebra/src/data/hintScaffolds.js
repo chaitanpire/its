@@ -228,6 +228,47 @@ export const HINT_SCAFFOLDS = {
     L3: 'xy² ≠ x²y because the exponents on x and y are swapped. They\'re NOT like terms.',
   },
 
+  K04_Q5: {
+    L1: 'Like terms must share the same variable AND the same exponent — both must match.',
+    L2: '7y has variable y with exponent 1. Which option also has y to the power 1?',
+    L3: '−3y has y¹ — same variable, same exponent as 7y. The others change the exponent or variable. Answer: −3y.',
+  },
+  K04_Q6: {
+    L1: 'Like terms have the same variable. NOT like terms have different variables or different exponents.',
+    L2: 'Check each pair: 2a and 5a (same letter?), −3x and x (same letter?), 4x and 4y (same letter?).',
+    L3: '4x has variable x; 4y has variable y — different letters → NOT like terms. The other pairs all share the same letter. Answer: 4x and 4y.',
+  },
+  K04_Q7: {
+    L1: 'For two terms to be like terms, both the variable AND the exponent must be identical.',
+    L2: 'Compare 5x² and −3x²: same variable (x)? Same exponent (2)? Check the other pairs the same way.',
+    L3: '5x² and −3x²: both have x², so they are like terms ✓. The other pairs differ in exponent or variable. Answer: 5x² and −3x².',
+  },
+  K04_Q8: {
+    L1: 'Each unique variable-and-exponent combination is its own group. Count how many distinct types exist.',
+    L2: 'List the terms: x (x¹), y (y¹), x² (x²), y² (y²). Are any of these the same type?',
+    L3: 'x¹, y¹, x², y² — all four are different combinations of variable and exponent. Each is its own group. Answer: 4.',
+  },
+  K04_Q9: {
+    L1: 'A like term to 6ab must contain both variables a AND b, each to the same power.',
+    L2: '6ab has a¹b¹. Which option also has both a and b, each with exponent 1?',
+    L3: '−2ab has a¹b¹ — same variables, same exponents as 6ab ✓. 6a is missing b. 6b is missing a. ab² has wrong exponent on b. Answer: −2ab.',
+  },
+  K04_Q10: {
+    L1: 'An expression with ONLY like terms means every single term must be the same type.',
+    L2: 'Check each option for mixed types: 2x + 3x − 5x (all x?), x + y + x (x and y mixed?)…',
+    L3: '2x + 3x − 5x: every term is x¹ → all like terms ✓. The others mix variables or exponents. Answer: 2x + 3x − 5x.',
+  },
+  K04_Q11: {
+    L1: 'For multi-variable terms, every variable and its exponent must match exactly.',
+    L2: '4x²y has x² and y¹. Which option also has exactly x² and y¹ in the same term?',
+    L3: '−3x²y has x²y¹ — same as 4x²y ✓. 4xy² swaps the exponents. x²y and xy miss something. Answer: 4x²y and −3x²y.',
+  },
+  K04_Q12: {
+    L1: 'Multiplication is commutative — the order you write variables does not change the term.',
+    L2: '2x²y means 2 × x² × y. 2yx² means 2 × y × x². Is the result the same?',
+    L3: '2x²y = 2 × x² × y = 2 × y × x² = 2yx². Order of multiplication never matters. They ARE like terms. Answer: True.',
+  },
+
   // ──────────── K05 ────────────
   K05_Q1: {
     L1: 'Only combine terms with the exact same variable. m-terms combine with m-terms only.',
@@ -248,6 +289,47 @@ export const HINT_SCAFFOLDS = {
     L1: 'Three groups: x²-terms, x-terms, constant. Identify and combine each.',
     L2: 'x²: 3x² − x² = ? x: 2x − 5x = ? Constant: +4.',
     L3: '3x² − x² = 2x². 2x − 5x = −3x. Constant = +4. Result: 2x² − 3x + 4.',
+  },
+
+  K05_Q5: {
+    L1: 'When subtracting like terms, subtract the coefficients and keep the variable.',
+    L2: '6x − 2x: both terms have x. Subtract the numbers in front: 6 − 2 = ?',
+    L3: '6x − 2x = (6 − 2)x = 4x. Answer: 4x.',
+  },
+  K05_Q6: {
+    L1: 'When adding like terms, add the coefficients and keep the variable unchanged.',
+    L2: '2y + 3y: both have y. Add the numbers in front: 2 + 3 = ?',
+    L3: '2y + 3y = (2 + 3)y = 5y. Answer: 5y.',
+  },
+  K05_Q7: {
+    L1: 'Combine only the a-terms. The standalone number has no like term and stays as is.',
+    L2: '7a − 3a + 2: combine the a-terms first → ? Then bring along the +2.',
+    L3: '7a − 3a = 4a. The +2 has no like term. Final: 4a + 2. Answer: 4a + 2.',
+  },
+  K05_Q8: {
+    L1: 'Group x-terms together and number terms together, then simplify each group.',
+    L2: 'x-terms: 5x − 3x = ? Number terms: 2 + 4 = ? Combine the results.',
+    L3: '5x − 3x = 2x. 2 + 4 = 6. Final: 2x + 6. Answer: 2x + 6.',
+  },
+  K05_Q9: {
+    L1: 'Treat x-terms and y-terms as completely separate groups — never combine them.',
+    L2: 'x-terms: 3x + 2x = ? y-terms: 4y − y = ? Write both results together.',
+    L3: '3x + 2x = 5x. 4y − y = 3y (remember: y = 1y). Final: 5x + 3y. Answer: 5x + 3y.',
+  },
+  K05_Q10: {
+    L1: 'All three terms have x² — treat them just like plain numbers and add/subtract the coefficients.',
+    L2: '2x² + 3x² − x²: add and subtract the numbers in front: 2 + 3 − 1 = ? Keep x².',
+    L3: '(2 + 3 − 1)x² = 4x². Answer: 4x².',
+  },
+  K05_Q11: {
+    L1: 'Group x²-terms separately from x-terms — different exponents mean different groups.',
+    L2: 'x²-group: x² + x² = ? x-group: 2x − x = ? Keep the two results separate.',
+    L3: 'x² + x² = 2x². 2x − x = x (1x). Final: 2x² + x. Answer: 2x² + x.',
+  },
+  K05_Q12: {
+    L1: 'Group a-terms together and constant terms together, then simplify each group.',
+    L2: 'a-terms: 4a − 2a = ? Constants: 3 − 5 = ? Watch the sign on the constants.',
+    L3: '4a − 2a = 2a. 3 − 5 = −2. Final: 2a − 2. Answer: 2a − 2.',
   },
 
   // ──────────── K06 ────────────
@@ -467,6 +549,471 @@ export const HINT_SCAFFOLDS = {
     L1: 'Distribute 3 to BOTH terms inside: 3 × 2n and 3 × (−5). Watch the sign on the second term.',
     L2: '3 × 2n = 6n. What is 3 × (−5)? Positive × negative = ?',
     L3: '3×2n = 6n. 3×(−5) = −15. Result: 6n − 15. Positive times negative gives a negative result.',
+  },
+
+  // ──────────── K06 (Q5–Q12) ────────────
+  K06_Q5: {
+    L1: 'An equation has an equals sign. An expression does not.',
+    L2: 'Check each option for the = symbol. The one without it is NOT an equation.',
+    L3: '2x + 7 has no = sign — it is an expression. x = 5, 3+4=7, and y−2=0 all have = signs. Answer: 2x + 7.',
+  },
+  K06_Q6: {
+    L1: 'An expression is a combination of terms with no equals sign.',
+    L2: 'Look for the option that has no = sign — that is an expression, not an equation.',
+    L3: '5x + 3 has no = sign → expression. The others (x=3, 2+3=5, y−1=0) all have = signs. Answer: 5x + 3.',
+  },
+  K06_Q7: {
+    L1: 'One solution means exactly one value of x makes the equation true — not always true, not never true.',
+    L2: 'Check: 2x+3=7 (can you find one x?), x+1=x+1 (always true?), 3=5 (ever true?).',
+    L3: '2x+3=7 → x=2 (one solution). x+1=x+1 is always true (infinite). 3=5 is never true. 2x+3 is an expression. Answer: 2x + 3 = 7.',
+  },
+  K06_Q8: {
+    L1: 'An identity is an equation that is true for ALL values of the variable, not just one.',
+    L2: 'Test each option with two different values of x. Which one works for every x?',
+    L3: 'x+2 = x+2: always true for any x (identity). x+2=x+3: never true. 2x=x: only x=0. x=5: only one value. Answer: x + 2 = x + 2.',
+  },
+  K06_Q9: {
+    L1: 'Think carefully about what you can DO with an expression versus an equation.',
+    L2: 'Expressions can be simplified. Equations can be solved. Can you "solve" an expression for a value?',
+    L3: 'You cannot solve an expression — there is nothing to solve without an equals sign. The FALSE statement is: "Expressions can be solved". Answer: Expressions can be solved.',
+  },
+  K06_Q10: {
+    L1: 'An identity is true for every possible value of x — it never fails.',
+    L2: 'Substitute x = 0, x = 1, x = 100 into each option. Which one is always true?',
+    L3: 'x+5 = x+5: always true for any x ✓. x+5=x+6: never true. 2x=x: only x=0. x=3: only one value. Answer: x + 5 = x + 5.',
+  },
+  K06_Q11: {
+    L1: 'No solution means there is no value of x that can make the equation true.',
+    L2: 'Cancel x from both sides of each option. If you get a false statement like 2 = 5, there is no solution.',
+    L3: 'x+2=x+5: subtract x → 2=5 (false, impossible → no solution). x+2=x+2: 2=2 (always true). The others have one solution. Answer: x + 2 = x + 5.',
+  },
+  K06_Q12: {
+    L1: 'Equations do not always have exactly one solution — think about identities and contradictions.',
+    L2: 'Recall: x+5=x+5 (infinite solutions), x+2=x+5 (no solution), 2x=6 (one solution). All are possible.',
+    L3: 'Equations can have one solution (2x=6), no solution (x+2=x+5), or infinitely many (x=x). The correct statement covers all three. Answer: Equations can have one, none, or infinite solutions.',
+  },
+
+  // ──────────── K07 (Q5–Q12) ────────────
+  K07_Q5: {
+    L1: 'The balance rule: the same operation on both sides keeps an equation equal.',
+    L2: 'If both sides go down by 2, the gap between them does not change. Does the equation stay true?',
+    L3: 'Subtracting 2 from both sides is the same legal move — equality is preserved. Answer: The equation remains balanced.',
+  },
+  K07_Q6: {
+    L1: 'If you add different amounts to each side, the two sides are no longer equal.',
+    L2: 'Imagine a scale: left side +7, right side +3. The pans are no longer level. What happens?',
+    L3: 'Different operations break the equality. If left gets +7 and right gets +3, they drift apart. Answer: The equation becomes unbalanced.',
+  },
+  K07_Q7: {
+    L1: 'Apply the subtraction to BOTH sides of x = 5.',
+    L2: 'Left side: x − 3. Right side: 5 − 3. Write the new equation.',
+    L3: 'x − 3 = 5 − 3 → x − 3 = 2. Answer: x − 3 = 2.',
+  },
+  K07_Q8: {
+    L1: 'The golden rule of equations: whatever you do to one side, do the exact same thing to the other.',
+    L2: 'Which option describes doing the identical operation on both sides?',
+    L3: 'Only "doing the same operation on both sides" preserves equality. All other options change only one side or use different operations. Answer: Doing the same operation on both sides.',
+  },
+  K07_Q9: {
+    L1: 'Dividing both sides by 2 cancels the coefficient on the left and divides the right.',
+    L2: 'Left: 2x ÷ 2 = x. Right: 10 ÷ 2 = 5. Write the result.',
+    L3: '2x/2 = 10/2 → x = 5. Both sides divided equally. Answer: x = 5.',
+  },
+  K07_Q10: {
+    L1: 'An operation that is NOT applied to both sides will break equality.',
+    L2: 'Three options apply the same change to both sides. One option changes only one side — which is it?',
+    L3: 'Adding 3 to one side only is the only option that changes a single side, destroying equality. Answer: Adding 3 to one side only.',
+  },
+  K07_Q11: {
+    L1: 'Dividing only one side of an equation makes the two sides unequal.',
+    L2: 'If right side becomes 9/3=3 but left stays 3x, you have 3x = 3 only if x=1, not the original truth.',
+    L3: 'Original: 3x = 9. Dividing only the right: 3x = 3. This is a DIFFERENT equation — the original is broken. Answer: Equation becomes incorrect.',
+  },
+  K07_Q12: {
+    L1: 'Equality means the two sides represent the same value — any unequal change destroys that.',
+    L2: 'Think: if left = right and you change only the left, can they still be equal?',
+    L3: 'Both sides must be treated equally to keep the "=" relationship valid. The reason is: to maintain equality. Answer: To maintain equality.',
+  },
+
+  // ──────────── K08 (Q5–Q12) ────────────
+  K08_Q5: {
+    L1: 'Inverse of addition is subtraction. Subtract the constant from both sides.',
+    L2: 'x has +5. Subtract 5 from both sides: x = 9 − 5.',
+    L3: 'x + 5 − 5 = 9 − 5 → x = 4. Answer: x = 4.',
+  },
+  K08_Q6: {
+    L1: 'Inverse of subtraction is addition. Add the constant to both sides.',
+    L2: 'z has −6. Add 6 to both sides: z = 2 + 6.',
+    L3: 'z − 6 + 6 = 2 + 6 → z = 8. Answer: z = 8.',
+  },
+  K08_Q7: {
+    L1: 'To undo subtracting 9, add 9 to both sides.',
+    L2: 'x − 9 = 3. Add 9 to both sides: x = 3 + 9.',
+    L3: 'x − 9 + 9 = 3 + 9 → x = 12. Answer: x = 12.',
+  },
+  K08_Q8: {
+    L1: 'The variable is on the right side. Add 5 to both sides to isolate x.',
+    L2: 'Rewrite as x − 5 = 20. Add 5: x = 20 + 5.',
+    L3: '20 = x − 5 → x − 5 + 5 = 20 + 5 → x = 25. Answer: x = 25.',
+  },
+  K08_Q9: {
+    L1: 'Subtract 12 from both sides. The result may be negative.',
+    L2: 'x + 12 = 5. Subtract 12: x = 5 − 12. Is 5 − 12 positive or negative?',
+    L3: 'x = 5 − 12 = −7. Answer: x = −7.',
+  },
+  K08_Q10: {
+    L1: 'Subtracting a negative is the same as adding. Simplify the left side first.',
+    L2: 'x − (−4) = x + 4. Now solve: x + 4 = 10. Subtract 4.',
+    L3: 'x − (−4) = x + 4 = 10 → x = 10 − 4 = 6. Answer: x = 6.',
+  },
+  K08_Q11: {
+    L1: 'Add 3 to both sides to cancel the −3 and isolate x.',
+    L2: '−3 + x = −10. Add 3 to both sides: x = −10 + 3.',
+    L3: '−3 + x + 3 = −10 + 3 → x = −7. Answer: x = −7.',
+  },
+  K08_Q12: {
+    L1: 'Adding zero to anything leaves it unchanged. What does that mean for x?',
+    L2: 'x + 0 = x (adding zero does nothing). So x + 0 = 9 simplifies to x = 9.',
+    L3: 'x + 0 = 9 → x = 9. Zero is the additive identity. Answer: x = 9.',
+  },
+
+  // ──────────── K09 (Q5–Q12) ────────────
+  K09_Q5: {
+    L1: 'Inverse of multiplication is division. Divide both sides by the coefficient.',
+    L2: '6x = 42. Divide both sides by 6: x = 42 ÷ 6.',
+    L3: '6x / 6 = 42 / 6 → x = 7. Answer: x = 7.',
+  },
+  K09_Q6: {
+    L1: 'Inverse of division is multiplication. Multiply both sides by the divisor.',
+    L2: 'x/5 = 3. Multiply both sides by 5: x = 3 × 5.',
+    L3: '(x/5) × 5 = 3 × 5 → x = 15. Answer: x = 15.',
+  },
+  K09_Q7: {
+    L1: 'Divide both sides by 8. Watch the sign — the right side is negative.',
+    L2: '8y = −32. Divide both sides by 8: y = −32 ÷ 8. Positive ÷ positive with negative numerator.',
+    L3: '8y / 8 = −32 / 8 → y = −4. Answer: y = −4.',
+  },
+  K09_Q8: {
+    L1: 'Multiply both sides by 4 to undo the division. Keep the sign.',
+    L2: 'x/4 = −6. Multiply both sides by 4: x = −6 × 4.',
+    L3: '(x/4) × 4 = −6 × 4 → x = −24. Answer: x = −24.',
+  },
+  K09_Q9: {
+    L1: 'Divide both sides by −3. Negative ÷ negative = positive.',
+    L2: '−3x = −15. Divide both sides by −3: x = −15 ÷ −3.',
+    L3: '−3x / −3 = −15 / −3 → x = 5 (negative ÷ negative = positive). Answer: x = 5.',
+  },
+  K09_Q10: {
+    L1: 'Dividing by 0.5 is the same as multiplying by 2.',
+    L2: '0.5x = 6. Divide by 0.5 (or multiply by 2): x = 6 ÷ 0.5.',
+    L3: '0.5x / 0.5 = 6 / 0.5 → x = 12. (6 ÷ 0.5 = 6 × 2 = 12). Answer: x = 12.',
+  },
+  K09_Q11: {
+    L1: 'Multiply both sides by −4. Two negatives multiply to a positive.',
+    L2: 'x/−4 = −3. Multiply both sides by −4: x = −3 × −4.',
+    L3: 'x = −3 × −4 = 12 (negative × negative = positive). Answer: x = 12.',
+  },
+  K09_Q12: {
+    L1: 'Ask: what value times 10 gives exactly 0?',
+    L2: '10x = 0. Divide both sides by 10: x = 0 ÷ 10.',
+    L3: '10x / 10 = 0 / 10 → x = 0. Zero is the only number that makes 10x = 0. Answer: x = 0.',
+  },
+
+  // ──────────── K10 (Q5–Q12) ────────────
+  K10_Q5: {
+    L1: 'Divide both sides by the coefficient of x.',
+    L2: '2x = 10. Divide both sides by 2: x = 10 ÷ 2.',
+    L3: '2x / 2 = 10 / 2 → x = 5. Answer: x = 5.',
+  },
+  K10_Q6: {
+    L1: 'Add 6 to both sides to cancel the −6.',
+    L2: 'x − 6 = 4. Add 6: x = 4 + 6.',
+    L3: 'x − 6 + 6 = 4 + 6 → x = 10. Answer: x = 10.',
+  },
+  K10_Q7: {
+    L1: 'Divide both sides by 5. The right side is negative — keep the sign.',
+    L2: '5x = −25. Divide by 5: x = −25 ÷ 5.',
+    L3: '5x / 5 = −25 / 5 → x = −5. Answer: x = −5.',
+  },
+  K10_Q8: {
+    L1: 'Multiply both sides by 2 to undo the division.',
+    L2: 'x/2 = 7. Multiply both sides by 2: x = 7 × 2.',
+    L3: '(x/2) × 2 = 7 × 2 → x = 14. Answer: x = 14.',
+  },
+  K10_Q9: {
+    L1: 'Divide both sides by −2. Positive ÷ negative = negative.',
+    L2: '−2x = 8. Divide both sides by −2: x = 8 ÷ −2.',
+    L3: '−2x / −2 = 8 / −2 → x = −4. Answer: x = −4.',
+  },
+  K10_Q10: {
+    L1: 'Ask: what number times 3 equals 0?',
+    L2: '3x = 0. Divide both sides by 3: x = 0 ÷ 3.',
+    L3: '3x / 3 = 0 / 3 → x = 0. Only zero satisfies this. Answer: x = 0.',
+  },
+  K10_Q11: {
+    L1: 'Dividing by 0.5 is the same as multiplying by 2.',
+    L2: 'x/0.5 = 10. Multiply both sides by 0.5: x = 10 × 0.5.',
+    L3: 'x = 10 × 0.5 = 5. Answer: x = 5.',
+  },
+  K10_Q12: {
+    L1: 'Two steps: first multiply by 2, then multiply by −1 to fix the sign.',
+    L2: '−x/2 = 6. Multiply both sides by 2: −x = 12. Then multiply by −1: x = ?',
+    L3: '−x/2 × 2 = 6 × 2 → −x = 12 → x = −12. Answer: x = −12.',
+  },
+
+  // ──────────── K11 (Q5–Q12) ────────────
+  K11_Q5: {
+    L1: 'Two steps: undo the constant first (subtract/add), then undo the coefficient (divide).',
+    L2: '3x + 2 = 11. Step 1: subtract 2 → 3x = 9. Step 2: divide by 3.',
+    L3: '3x + 2 − 2 = 11 − 2 → 3x = 9 → x = 3. Answer: x = 3.',
+  },
+  K11_Q6: {
+    L1: 'Add first to undo the constant, then divide to undo the coefficient.',
+    L2: '4x − 4 = 12. Add 4: 4x = 16. Then divide by 4.',
+    L3: '4x − 4 + 4 = 12 + 4 → 4x = 16 → x = 4. Answer: x = 4.',
+  },
+  K11_Q7: {
+    L1: 'Subtract the constant first. The answer may be negative.',
+    L2: '2x + 5 = 1. Subtract 5: 2x = 1 − 5 = −4. Then divide by 2.',
+    L3: '2x = 1 − 5 = −4 → x = −4 / 2 = −2. Answer: x = −2.',
+  },
+  K11_Q8: {
+    L1: 'Add 2 to both sides first, then divide by the coefficient.',
+    L2: '6x − 2 = 10. Add 2: 6x = 12. Then divide by 6.',
+    L3: '6x − 2 + 2 = 10 + 2 → 6x = 12 → x = 2. Answer: x = 2.',
+  },
+  K11_Q9: {
+    L1: 'Subtract the constant first — notice both sides of the equation after you do.',
+    L2: '7x + 3 = 3. Subtract 3: 7x = 0. What number times 7 equals 0?',
+    L3: '7x + 3 − 3 = 3 − 3 → 7x = 0 → x = 0. Answer: x = 0.',
+  },
+  K11_Q10: {
+    L1: 'Subtract the constant from both sides first, then divide by the coefficient (which is negative).',
+    L2: '4 − 3x = 1. Subtract 4: −3x = −3. Divide by −3.',
+    L3: '4 − 3x − 4 = 1 − 4 → −3x = −3 → x = 1. Answer: x = 1.',
+  },
+  K11_Q11: {
+    L1: 'Add 6 to both sides first, then divide.',
+    L2: '2x − 6 = −2. Add 6: 2x = 4. Then divide by 2.',
+    L3: '2x − 6 + 6 = −2 + 6 → 2x = 4 → x = 2. Answer: x = 2.',
+  },
+  K11_Q12: {
+    L1: 'Subtract 6 first, then divide. The result will be negative.',
+    L2: '3x + 6 = 0. Subtract 6: 3x = −6. Then divide by 3.',
+    L3: '3x + 6 − 6 = 0 − 6 → 3x = −6 → x = −2. Answer: x = −2.',
+  },
+
+  // ──────────── K12 (Q5–Q12) ────────────
+  K12_Q5: {
+    L1: '"More than" means addition. Set up the equation with the unknown first.',
+    L2: 'Let n = the number. "Five more than n" = n + 5. Set it equal to 12.',
+    L3: 'n + 5 = 12. Answer: n + 5 = 12.',
+  },
+  K12_Q6: {
+    L1: 'Set up the equation, then solve by adding to both sides.',
+    L2: '"Decreased by 3" → n − 3 = 9. Add 3 to both sides to find n.',
+    L3: 'n − 3 = 9 → n = 9 + 3 = 12. Answer: 12.',
+  },
+  K12_Q7: {
+    L1: 'Translate into an equation first, then solve in two steps.',
+    L2: '"Twice a number minus 4 = 10" → 2n − 4 = 10. Add 4 first, then divide by 2.',
+    L3: '2n − 4 = 10 → 2n = 14 → n = 7. Answer: 7.',
+  },
+  K12_Q8: {
+    L1: '"Half a number" means divide by 2. Set up the equation, then undo the operations in reverse.',
+    L2: 'n/2 + 6 = 10. Subtract 6 first: n/2 = 4. Then multiply by 2.',
+    L3: 'n/2 + 6 = 10 → n/2 = 4 → n = 8. Answer: 8.',
+  },
+  K12_Q9: {
+    L1: 'Translate the phrase into an equation, then solve in two steps.',
+    L2: '"Three more than twice a number is 13" → 2n + 3 = 13. Subtract 3 first, then divide.',
+    L3: '2n + 3 = 13 → 2n = 10 → n = 5. Answer: 5.',
+  },
+  K12_Q10: {
+    L1: 'Identify the fixed fee and the per-item cost. Set up a two-step equation.',
+    L2: 'Let n = number of items. 20 + 5n = 70. Subtract 20 first, then divide by 5.',
+    L3: '20 + 5n = 70 → 5n = 50 → n = 10. Answer: 10.',
+  },
+  K12_Q11: {
+    L1: 'Translate into an equation and solve in two steps.',
+    L2: '"Multiplied by 4, then reduced by 6, equals 10" → 4n − 6 = 10. Add 6 first, then divide.',
+    L3: '4n − 6 = 10 → 4n = 16 → n = 4. Answer: 4.',
+  },
+  K12_Q12: {
+    L1: 'Translate, then undo the operations in reverse order.',
+    L2: '"Divided by 3 plus 2 equals 6" → n/3 + 2 = 6. Subtract 2 first, then multiply by 3.',
+    L3: 'n/3 + 2 = 6 → n/3 = 4 → n = 12. Answer: 12.',
+  },
+
+  // ──────────── K13 (Q5–Q15) ────────────
+  K13_Q5: {
+    L1: '"Increased by" always means add. The unknown comes first.',
+    L2: 'Let n = the number. "Increased by 7" = add 7 to n.',
+    L3: '"A number increased by 7" = n + 7. Answer: n + 7.',
+  },
+  K13_Q6: {
+    L1: '"Divided by" means use division. The number being divided is n.',
+    L2: 'n divided by 3 is written as n ÷ 3. Do not confuse with 3n (multiplication).',
+    L3: '"A number divided by 3" = n ÷ 3. Answer: n ÷ 3.',
+  },
+  K13_Q7: {
+    L1: '"Times" or "multiplied by" means multiplication. Write the number before the variable.',
+    L2: '"Four times a number n" = 4 × n = 4n.',
+    L3: '"Four times a number" = 4n. Answer: 4n.',
+  },
+  K13_Q8: {
+    L1: '"Less than" reverses order. "5 less than X" means X − 5, not 5 − X.',
+    L2: '"Five less than twice a number": first write twice the number (2n), then subtract 5.',
+    L3: '"Twice a number" = 2n. "Five less than 2n" = 2n − 5. Answer: 2n − 5.',
+  },
+  K13_Q9: {
+    L1: 'Identify the product first, then add "three more" to it.',
+    L2: '"Product of 6 and n" = 6n. "Three more than" = +3. Combine them.',
+    L3: '"Product of 6 and n" = 6n. "Three more" = 6n + 3. Answer: 6n + 3.',
+  },
+  K13_Q10: {
+    L1: '"All multiplied by 5" means the entire sum needs brackets before multiplying.',
+    L2: '"The sum of n and 4" = (n+4). "All multiplied by 5" = 5 × (n+4).',
+    L3: '5(n + 4). Without brackets, 5n+4 would mean only n is multiplied by 5. Answer: 5(n + 4).',
+  },
+  K13_Q11: {
+    L1: '"Quotient" means division. Do the division first, then add 6.',
+    L2: '"Quotient of n and 4" = n ÷ 4. "Increased by 6" = + 6 after the division.',
+    L3: 'n ÷ 4 + 6. Do not put 6 inside the division. Answer: n ÷ 4 + 6.',
+  },
+  K13_Q12: {
+    L1: '"The difference" means subtract. Use brackets so the 3 multiplies the whole difference.',
+    L2: '"Difference of n and 4" = (n−4). "Three times" that difference = 3 × (n−4).',
+    L3: '3(n − 4). Without brackets, 3n−4 means only n is multiplied by 3. Answer: 3(n − 4).',
+  },
+  K13_Q13: {
+    L1: '"Twice the sum" requires brackets. Then subtract 3 outside the bracket.',
+    L2: '"Sum of n and 7" = (n+7). "Twice" that = 2(n+7). "Decreased by 3" = −3 outside.',
+    L3: '2(n + 7) − 3. The −3 is outside the bracket. Answer: 2(n + 7) − 3.',
+  },
+  K13_Q14: {
+    L1: 'Perimeter = 2 × width + 2 × length. Write expressions for both sides first.',
+    L2: 'Width = n. Length = n + 5. Perimeter = 2(n) + 2(n+5). Expand and simplify.',
+    L3: '2n + 2(n+5) = 2n + 2n + 10 = 4n + 10. Answer: 4n + 10.',
+  },
+  K13_Q15: {
+    L1: '"Three times the sum" needs brackets. Then add 8 outside.',
+    L2: '"Sum of n and 2" = (n+2). "Three times" = 3(n+2). "Eight more than" = +8 outside.',
+    L3: '3(n + 2) + 8. The +8 sits outside the brackets. Answer: 3(n + 2) + 8.',
+  },
+
+  // ──────────── K14 (Q5–Q15) ────────────
+  K14_Q5: {
+    L1: 'Find the common difference between consecutive terms, then add it to the last term.',
+    L2: '4 − 2 = 2. Each term increases by 2. What is 8 + 2?',
+    L3: 'Common difference = 2. Next term = 8 + 2 = 10. Answer: 10.',
+  },
+  K14_Q6: {
+    L1: 'Substitute n = 5 into the rule. Multiply — do not add.',
+    L2: 'Rule is 2n. Replace n with 5: 2 × 5.',
+    L3: '2n with n=5: 2 × 5 = 10. Answer: 10.',
+  },
+  K14_Q7: {
+    L1: 'The sequence is decreasing. Find by how much it drops each step.',
+    L2: '10 − 7 = 3. Each term decreases by 3. What is 1 − 3?',
+    L3: 'Common difference = −3. Next term = 1 − 3 = −2. Answer: −2.',
+  },
+  K14_Q8: {
+    L1: 'Substitute n = 6. Multiply first, then add the constant.',
+    L2: 'Rule is 2n + 3. Replace n with 6: 2 × 6 + 3. Multiply before adding.',
+    L3: '2(6) + 3 = 12 + 3 = 15. Answer: 15.',
+  },
+  K14_Q9: {
+    L1: 'Find the common difference (coefficient of n). Then use n = 1 to find the constant.',
+    L2: 'Difference = 5−2 = 3. Rule: 3n + c. When n=1, value=2: 3(1) + c = 2 → c = ?',
+    L3: '3(1) + c = 2 → c = −1. Rule: 3n − 1. Check: n=2 → 3(2)−1 = 5 ✓. Answer: 3n − 1.',
+  },
+  K14_Q10: {
+    L1: 'Substitute n = 8 into the rule. Multiply first, then add.',
+    L2: 'Rule is 4n + 1. Replace n with 8: 4 × 8 + 1. Multiply before adding.',
+    L3: '4(8) + 1 = 32 + 1 = 33. Answer: 33.',
+  },
+  K14_Q11: {
+    L1: 'Find the common difference from the table, then use one entry to find the constant.',
+    L2: 'Difference = 9 − 6 = 3. Rule: 3n + c. When n=1, value=6: 3(1) + c = 6 → c = ?',
+    L3: '3(1) + c = 6 → c = 3. Rule: 3n + 3. Check: n=2 → 6+3=9 ✓. Answer: 3n + 3.',
+  },
+  K14_Q12: {
+    L1: 'Find the common difference, then use n = 1 to determine the constant.',
+    L2: 'Difference = 11 − 5 = 6. Rule: 6n + c. When n=1, value=5: 6(1) + c = 5 → c = ?',
+    L3: '6(1) + c = 5 → c = −1. Rule: 6n − 1. Check: n=2 → 12−1=11 ✓. Answer: 6n − 1.',
+  },
+  K14_Q13: {
+    L1: 'From term 1 to term 12 there are 11 gaps, not 12.',
+    L2: 'Start at 3. Add 4 exactly 11 times (not 12): 3 + (11 × 4).',
+    L3: '3 + 11 × 4 = 3 + 44 = 47. Answer: 47.',
+  },
+  K14_Q14: {
+    L1: 'Set the rule equal to 19 and solve for n.',
+    L2: '2n + 1 = 19. Subtract 1: 2n = 18. Then divide by 2.',
+    L3: '2n + 1 = 19 → 2n = 18 → n = 9. Answer: 9.',
+  },
+  K14_Q15: {
+    L1: 'Set the two rules equal to each other and solve for n.',
+    L2: '3n + 2 = 5n − 4. Collect n-terms on one side: subtract 3n. Collect numbers on the other: add 4.',
+    L3: '3n + 2 = 5n − 4 → 6 = 2n → n = 3. Check: A=11, B=11 ✓. Answer: 3.',
+  },
+
+  // ──────────── K15 (Q5–Q15) ────────────
+  K15_Q5: {
+    L1: 'Multiply the number outside by EVERY term inside the brackets.',
+    L2: '5(a + 2): 5 × a = 5a. 5 × 2 = 10. Join with +.',
+    L3: '5 × a = 5a. 5 × 2 = 10. Result: 5a + 10. Answer: 5a + 10.',
+  },
+  K15_Q6: {
+    L1: 'Distribute to both terms. Positive times negative gives negative.',
+    L2: '4(3 − m): 4 × 3 = 12. 4 × (−m) = −4m. Join them.',
+    L3: '4 × 3 = 12. 4 × (−m) = −4m. Result: 12 − 4m. Answer: 12 − 4m.',
+  },
+  K15_Q7: {
+    L1: 'Multiply the outside number by each term inside — do not just add.',
+    L2: '2(6 + n): 2 × 6 = 12. 2 × n = 2n. Join with +.',
+    L3: '2 × 6 = 12. 2 × n = 2n. Result: 12 + 2n. Answer: 12 + 2n.',
+  },
+  K15_Q8: {
+    L1: 'Expand the brackets first, then collect like terms.',
+    L2: '3(x + 2) = 3x + 6. Now add 5x: 3x + 6 + 5x. Combine x-terms.',
+    L3: '3(x+2) = 3x + 6. Then 3x + 6 + 5x = 8x + 6. Answer: 8x + 6.',
+  },
+  K15_Q9: {
+    L1: 'Expand the brackets first, then add the remaining term and collect like terms.',
+    L2: '2(3n − 4) = 6n − 8. Now add n: 6n − 8 + n. Combine n-terms.',
+    L3: '2(3n−4) = 6n − 8. Then 6n − 8 + n = 7n − 8. Answer: 7n − 8.',
+  },
+  K15_Q10: {
+    L1: 'Multiply the outside number by each term inside.',
+    L2: '6(2x + 3): 6 × 2x = 12x. 6 × 3 = 18. Join with +.',
+    L3: '6 × 2x = 12x. 6 × 3 = 18. Result: 12x + 18. Answer: 12x + 18.',
+  },
+  K15_Q11: {
+    L1: 'Expand first, then subtract the extra term and collect like terms.',
+    L2: '5(n + 1) = 5n + 5. Now subtract 2n: 5n + 5 − 2n. Combine n-terms.',
+    L3: '5(n+1) = 5n + 5. Then 5n + 5 − 2n = 3n + 5. Answer: 3n + 5.',
+  },
+  K15_Q12: {
+    L1: 'Expand both brackets separately, then subtract the second result from the first.',
+    L2: '3(2x+4) = 6x+12. 2(x+1) = 2x+2. Now: 6x+12 − (2x+2). Collect terms.',
+    L3: '6x+12 − 2x − 2 = 4x + 10. Answer: 4x + 10.',
+  },
+  K15_Q13: {
+    L1: 'Expand both brackets separately, then add the results together.',
+    L2: '4(n−3) = 4n−12. 2(n+5) = 2n+10. Now add: (4n−12) + (2n+10).',
+    L3: '4n − 12 + 2n + 10 = 6n − 2. Answer: 6n − 2.',
+  },
+  K15_Q14: {
+    L1: 'Expand both brackets, then subtract the second expansion from the first.',
+    L2: '5(2x−1) = 10x−5. 3(x+2) = 3x+6. Now: 10x−5 − (3x+6). Collect terms.',
+    L3: '10x − 5 − 3x − 6 = 7x − 11. Answer: 7x − 11.',
+  },
+  K15_Q15: {
+    L1: 'A negative sign outside brackets flips every sign inside. Expand carefully.',
+    L2: '2(3n+4) = 6n+8. −(n−2) = −n+2 (signs flip). Now add both results.',
+    L3: '6n + 8 + (−n + 2) = 5n + 10. Answer: 5n + 10.',
   },
 };
 
