@@ -10,7 +10,7 @@ import { ASSESSMENT_BANK } from './data/assessmentBank.js';
 import { HINT_SCAFFOLDS } from './data/hintScaffolds.js';
 import { KNOWLEDGE_NODES } from './data/knowledgeNodes.js';
 
-export const CHAPTER_ID = 'grade7_algebraic_expressions_simple_linear_equations';
+export const CHAPTER_ID = 'grade7_simple_equations_and_algebraic_expressions';
 const MERGE_API_URL = 'http://100.90.57.38:8200/merge/interactions';
 
 // ─────────────────────────────────────────────
