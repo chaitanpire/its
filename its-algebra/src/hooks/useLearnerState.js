@@ -151,6 +151,7 @@ export function useLearnerState() {
     setRecentPerformance([]);
     setSessionUsedIds(initialUsedIds);
     setDifficultyMessage(null);
+    setSessionLog([]);
   }, [learnerState]);
 
   const goToDashboard = useCallback(() => {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLearnerState } from './hooks/useLearnerState.js';
 import Dashboard from './components/Dashboard.jsx';
 import LearningPage from './components/LearningPage.jsx';
@@ -8,6 +8,18 @@ import RemedialLesson from './components/RemedialLesson.jsx';
 export default function App() {
   const its = useLearnerState();
   const { currentView, currentNodeId, showRemedial } = its;
+
+  // Extract student_id and session_id injected by the Merge portal via URL params.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const studentId = params.get('student_id');
+    const sessionId = params.get('session_id');
+    if (studentId) sessionStorage.setItem('student_id', studentId);
+    if (sessionId) sessionStorage.setItem('session_id', sessionId);
+    if (!studentId || !sessionId) {
+      console.warn('[AlgebraQuest] student_id or session_id missing from URL. Launch from the Merge portal.');
+    }
+  }, []);
 
   const renderView = () => {
     if (showRemedial && currentNodeId) {

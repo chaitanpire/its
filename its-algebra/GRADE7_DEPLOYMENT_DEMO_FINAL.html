@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grade 7 Team Deployment Demo Deck</title>
+  <style>
+    :root {
+      --ink: #1e2340;
+      --ink-soft: #5e6790;
+      --cream: #fff7ef;
+      --white: rgba(255,255,255,0.82);
+      --gold: #ffb703;
+      --peach: #ff8f5a;
+      --pink: #ff5d8f;
+      --cyan: #2ad1ff;
+      --mint: #63e6be;
+      --violet: #8b5cf6;
+      --blueberry: #4f7cff;
+      --shadow: 0 28px 60px rgba(74, 53, 120, 0.16);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Trebuchet MS", "Bahnschrift", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 12%, rgba(42, 209, 255, 0.28), transparent 18%),
+        radial-gradient(circle at 86% 10%, rgba(255, 93, 143, 0.22), transparent 20%),
+        radial-gradient(circle at 80% 84%, rgba(99, 230, 190, 0.22), transparent 22%),
+        linear-gradient(180deg, #fff8ec 0%, #fff0f6 46%, #eef9ff 100%);
+      overflow: hidden;
+    }
+
+    .deck {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 118px 1fr;
+    }
+
+    .rail {
+      padding: 18px 14px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.72), rgba(255,255,255,0.5));
+      border-right: 1px solid rgba(79, 124, 255, 0.12);
+      backdrop-filter: blur(16px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand {
+      width: 76px;
+      height: 76px;
+      border-radius: 26px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--gold), var(--pink));
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+
+    .dot-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      overflow: auto;
+      padding-right: 4px;
+    }
+
+    .dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 0;
+      background: rgba(79, 124, 255, 0.22);
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .dot.active {
+      transform: scale(1.28);
+      background: linear-gradient(135deg, var(--cyan), var(--pink));
+    }
+
+    .main {
+      position: relative;
+      padding: 22px 22px 118px;
+    }
+
+    .progress-track {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      top: 18px;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(79, 124, 255, 0.12);
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--cyan), var(--gold), var(--pink));
+      transition: width 0.28s ease;
+    }
+
+    .viewport {
+      position: relative;
+      height: 100%;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 24px 0 0;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(42px) scale(0.98);
+      transition: opacity 0.28s ease, transform 0.28s ease;
+      padding: 42px;
+      border-radius: var(--radius-xl);
+      overflow: auto;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.7);
+      background: linear-gradient(180deg, rgba(255,255,255,0.88), rgba(255,255,255,0.72));
+      backdrop-filter: blur(18px);
+    }
+
+    .slide.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(0) scale(1);
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      opacity: 0.9;
+    }
+
+    .slide.cover::before {
+      background:
+        radial-gradient(circle at 82% 18%, rgba(255, 183, 3, 0.22), transparent 22%),
+        radial-gradient(circle at 18% 16%, rgba(42, 209, 255, 0.22), transparent 18%);
+    }
+
+    .slide.flow::before {
+      background:
+        radial-gradient(circle at 84% 18%, rgba(99, 230, 190, 0.24), transparent 24%);
+    }
+
+    .slide.split::before,
+    .slide.split-code::before {
+      background:
+        radial-gradient(circle at 20% 16%, rgba(79, 124, 255, 0.16), transparent 18%),
+        radial-gradient(circle at 84% 18%, rgba(255, 93, 143, 0.16), transparent 20%);
+    }
+
+    .slide.code::before,
+    .slide.doc::before,
+    .slide.doc-grid::before {
+      background:
+        radial-gradient(circle at 84% 18%, rgba(42, 209, 255, 0.2), transparent 22%);
+    }
+
+    .slide.warning::before {
+      background:
+        radial-gradient(circle at 82% 18%, rgba(255, 143, 90, 0.24), transparent 22%);
+    }
+
+    .slide.final::before {
+      background:
+        radial-gradient(circle at 18% 22%, rgba(99, 230, 190, 0.24), transparent 24%);
+    }
+
+    .slide-meta {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.74);
+      color: #6d4aa0;
+      font-size: 0.92rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .slide-count {
+      color: #6b7396;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .slide-body {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 24px;
+      align-content: start;
+      min-height: calc(100% - 30px);
+      padding-top: 18px;
+    }
+
+    .headline-block h1 {
+      margin: 0 0 14px;
+      font-size: clamp(3rem, 4.6vw, 5.6rem);
+      line-height: 0.96;
+      letter-spacing: -0.03em;
+      max-width: 1140px;
+    }
+
+    .subtitle {
+      margin: 0;
+      max-width: 1040px;
+      font-size: 1.28rem;
+      line-height: 1.68;
+      color: var(--ink-soft);
+    }
+
+    .bullet-list {
+      margin: 0;
+      padding-left: 26px;
+      display: grid;
+      gap: 14px;
+      max-width: 1040px;
+    }
+
+    .bullet-list li {
+      font-size: 1.18rem;
+      line-height: 1.62;
+      color: var(--ink);
+    }
+
+    .column-grid,
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 18px;
+    }
+
+    .column-card,
+    .mini-card,
+    .code-shell {
+      position: relative;
+      padding: 22px;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.76);
+      border: 1px solid rgba(79, 124, 255, 0.12);
+      box-shadow: 0 18px 34px rgba(90, 101, 156, 0.08);
+    }
+
+    .column-card::before,
+    .mini-card::before,
+    .code-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 6px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--cyan), var(--gold), var(--pink));
+    }
+
+    .column-card h3,
+    .mini-card h3,
+    .code-label {
+      margin: 0 0 12px;
+      font-size: 1.08rem;
+      color: #8450b9;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .column-card ul {
+      margin: 0;
+      padding-left: 20px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .column-card li {
+      font-size: 1.08rem;
+      line-height: 1.58;
+    }
+
+    pre {
+      margin: 0;
+      padding: 18px 20px;
+      border-radius: var(--radius-md);
+      background: #1c2140;
+      color: #f9fbff;
+      border: 1px solid rgba(255,255,255,0.14);
+      overflow-x: auto;
+      line-height: 1.62;
+      font-size: 1rem;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+    }
+
+    code {
+      font-family: "Cascadia Code", "Consolas", monospace;
+    }
+
+    .controls {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 16px 18px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.76);
+      border: 1px solid rgba(79, 124, 255, 0.14);
+      box-shadow: 0 18px 42px rgba(90, 101, 156, 0.12);
+      backdrop-filter: blur(16px);
+    }
+
+    .control-text {
+      color: #68739c;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 12px;
+    }
+
+    .nav-btn {
+      border: 0;
+      padding: 14px 22px;
+      border-radius: 16px;
+      cursor: pointer;
+      font: inherit;
+      font-size: 1rem;
+      font-weight: 800;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .nav-btn.secondary {
+      background: linear-gradient(135deg, #dfe9ff, #f4e6ff);
+      color: #4a4f74;
+    }
+
+    .nav-btn.primary {
+      background: linear-gradient(135deg, var(--cyan), var(--gold), var(--pink));
+      color: #ffffff;
+    }
+
+    .nav-btn:disabled {
+      opacity: 0.45;
+      cursor: default;
+      transform: none;
+    }
+
+    @media (max-width: 980px) {
+      .deck {
+        grid-template-columns: 1fr;
+      }
+
+      .rail {
+        display: none;
+      }
+
+      .main {
+        padding: 18px 18px 118px;
+      }
+
+      .slide {
+        padding: 28px;
+      }
+
+      .headline-block h1 {
+        font-size: clamp(2.3rem, 9vw, 3.8rem);
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+      }
+
+      .bullet-list li,
+      .column-card li {
+        font-size: 1rem;
+      }
+
+      .controls {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button-row {
+        width: 100%;
+      }
+
+      .nav-btn {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="deck">
+    <aside class="rail">
+      <div class="brand">G7</div>
+      <div class="dot-list" id="dot-list"></div>
+    </aside>
+
+    <main class="main">
+      <div class="progress-track"><div class="progress-bar" id="progress-bar"></div></div>
+      <div class="viewport">
+        
+    <section class="slide cover" data-slide="0">
+      <div class="slide-meta">
+        <span class="eyebrow">Grade 7 Demo Deck</span>
+        <span class="slide-count">01 / 18</span>
+      </div>
+      <div class="slide-body">
+        <div class="headline-block">
+          <h1>Deploy Your App to the Host Server</h1>
+          <p class="subtitle">A fast classroom walkthrough for tomorrow: join Tailscale, log in with SSH, upload the project, start the app on the assigned port, and send the merge payload back to the host system.</p>
+        </div>
+        
+        
+        
+        <ul class="bullet-list"><li>Server name: la-et</li><li>Tailscale IP: 100.90.57.38</li><li>Every team already has its own Windows account, folder, and port</li><li>This deck is designed to be clicked slide by slide using Next and Back</li></ul>
+      </div>
+    </section>
+    
+    <section class="slide flow" data-slide="1">
+      <div class="slide-meta">
+        <span class="eyebrow">Big Picture</span>
+        <span class="slide-count">02 / 18</span>
+      </div>
+      <div class="slide-body">
+        <div class="headline-block">
+          <h1>The Flow in One Minute</h1>
+          <p class="subtitle">Say this before opening any terminal.</p>
+        </div>
+        
+        
+        
+        <ul class="bullet-list"><li>Step 1: Team joins the host Tailscale network with its Gmail.</li><li>Step 2: Team logs into the server with the team username and password.</li><li>Step 3: Team uploads its code from the local machine.</li><li>Step 4: Team moves into its own server folder and extracts the project.</li><li>Step 5: Team starts the app using the correct command for its framework.</li><li>Step 6: Team opens the live link and sends session-end data to the merge server.</li></ul>
+      </div>
+    </section>
+    
+    <section class="slide split" data-slide="2">
+      <div class="slide-meta">
+        <span class="eyebrow">Important</span>
+        <span class="slide-count">03 / 18</span>
+      </div>
+      <div class="slide-body">
+        <div class="headline-block">
+          <h1>Tailscale Login Is Not SSH Login</h1>
+          <p class="subtitle">This is the first thing to explain clearly.</p>
+        </div>
+        <div class="column-grid">
+            <div class="column-card">
+              <h3>Tailscale</h3>
+              <ul><li>Uses Gmail or approved email</li><li>Only gives network access to the host machine</li><li>Lets teams connect from different internet networks</li></ul>
+              
+            </div>
+            
+            <div class="column-card">
+              <h3>SSH</h3>
+              <ul><li>Uses team username like team7</li><li>Uses the password given by the host team</li><li>Actually opens the server machine for deployment work</li></ul>
+              
+            </div>
+            </div>
+        
+        
+        
+      </div>
+    </section>
+    
+    <section class="slide code" data-slide="3">
+      <div class="slide-meta">
+        <span class="eyebrow">Step 1</span>
+        <span class="slide-count">04 / 18</span>
+      </div>
+      <div class="slide-body">
+        <div class="headline-block">
+          <h1>Join Tailscale and Verify Access</h1>
+          <p class="subtitle">These commands run on the team&#x27;s own laptop after Tailscale is installed.</p>
+        </div>
+        
+        
+        
+      <div class="code-shell">
+        <div class="code-label">Verify network access</div>
+        <pre><code>tailscale ip -4
+tailscale status</code></pre>
+      </div>
+    
+        <ul class="bullet-list"><li>If the device is not visible in the host network, SSH will fail.</li><li>This is where teams use Gmail, not the team account.</li></ul>
+      </div>
+    </section>
+    
+    <section class="slide code" data-slide="4">
+      <div class="slide-meta">
+        <span class="eyebrow">Step 2</span>
+        <span class="slide-count">05 / 18</span>
+      </div>
+      <div class="slide-body">
+        <div class="headline-block">
+          <h1>Log Into the Server</h1>
+          <p class="subtitle">Example below uses Team 7. Every team replaces only its own team number.</p>
+        </div>
+        
+        
+        
+      <div class="code-shell">
+        <div class="code-label">SSH command</div>
+        <pre><code>ssh team7@100.90.57.38</code></pre>
+      </div>
+    
+        <ul class="bullet-list"><li>Nothing appears when typing the SSH password. That is normal.</li><li>After login, the real working folder pattern is C:\classroom_server\teamN\apps\project</li></ul>
+      </div>
+    </section>
+    
+    <section class="slide split-code" data-slide="5">
+      <div class="slide-meta">
+        <span class="eyebrow">Step 3</span>
+        <span class="slide-count">06 / 18</span>
+      </div>
+      <div class="slide-body">
+        <div class="headline-block">
+          <h1>Upload the ZIP From the Local Machine</h1>
+          <p class="subtitle">Do not try to use your laptop file path inside the remote SSH shell.</p>
+        </div>
+        <div class="column-grid">
+            <div class="column-card">
+              <h3>Windows laptop</h3>
+              
+              <pre><code>scp &quot;C:\Users\YourName\Downloads\project.zip&quot; team7@100.90.57.38: </code></pre>
+            </div>
+            
+            <div class="column-card">
+              <h3>Mac laptop</h3>
+              
+              <pre><code>scp &quot;/Users/yourname/Downloads/project.zip&quot; team7@100.90.57.38: </code></pre>
+            </div>
+            </div>
+        
+        
+        <ul class="bullet-list"><li>This sends the ZIP into the team user&#x27;s home directory first.</li><li>That makes the upload more reliable than targeting a deep Windows path directly.</li></ul>
+      </div>
+    </section>
+    
+    <section class="slide code" data-slide="6">
+      <div class="slide-meta">
+        <span class="eyebrow">Step 3A</span>
+        <span class="slide-count">07 / 18</span>
+      </div>
+      <div class="slide-body">
+        <div class="headline-block">
+          <h1>Alternative: Clone the Project Directly</h1>
+          <p class="subtitle">If your code is already on GitHub, this is often cleaner than uploading a ZIP.</p>
+        </div>
+        
+        
+        
+      <div class="code-shell">
+        <div class="code-label">Inside the server after SSH login</div>
+        <pre><code>cd C:\classroom_server\team7\apps\project
+git clone https://github.com/your-team/your-repo.git .
+
+# private repo option
+git clone https://YOUR_TOKEN@github.com/your-team/your-repo.git .</code></pre>
+      </div>
+    
+        <ul class="bullet-list"><li>Use this only inside your assigned team folder.</li><li>Do not use both ZIP upload and git clone in the same folder unless you know exactly what you are replacing.</li><li>If the folder is not empty, clean it first or clone into a fresh project folder.</li></ul>
+      </div>
+    </section>
+    
+    <section class="slide code" data-slide="7">
+      <div class="slide-meta">
+        <span class="eyebrow">Step 4</span>
+        <span class="slide-count">08 / 18</span>
+      </div>
+      <div class="slide-body">
+        <div class="headline-block">
+          <h1>Move and Extract in the Correct Team Folder</h1>
+          <p class="subtitle">Now switch to the SSH window and unpack inside the assigned deployment folder.</p>
+        </div>
+        
+        
+        
+      <div class="code-shell">
+        <div class="code-label">Inside the server</div>
+        <pre><code>Move-Item &quot;$HOME\project.zip&quot; &quot;C:\classroom_server\team7\apps\project\&quot;
+cd C:\classroom_server\team7\apps\project
+Expand-Archive -LiteralPath .\project.zip -DestinationPath . -Force</code></pre>
+      </div>
+    
+        <ul class="bullet-list"><li>Correct folder: C:\classroom_server\team7\apps\project</li><li>Wrong folder: C:\Users\classroom_server\team7\apps\project</li></ul>
+      </div>
+    </section>
+    
+    <section class="slide doc" data-slide="8">
+      <div class="slide-meta">
+        <span class="eyebrow">Attached Doc</span>
+        <span class="slide-count">09 / 18</span>
+      </div>
+      <div class="slide-body">
+        <div class="headline-block">
+          <h1>Windows Team App Start Commands</h1>
+          <p class="subtitle">This slide comes directly from the attached document. Use these commands only after the team has connected through SSH and moved into its own project folder on the server.</p>
+        </div>
+        
+        
+        
+        <ul class="bullet-list"><li>Replace only the port number such as 8101, 8102, or 8107.</li><li>Every app must bind to 0.0.0.0 so it is reachable from another device.</li><li>These commands are especially useful for a live demo because they start apps quickly in separate processes.</li></ul>
+      </div>
+    </section>
+    
+    <section class="slide doc-grid" data-slide="9">
+      <div class="slide-meta">
+        <span class="eyebrow">Doc Slide 1</span>
+        <span class="slide-count">10 / 18</span>
+      </div>
+      <div class="slide-body">
+        <div class="headline-block">
+          <h1>Quick Start Commands for Python-Based Apps</h1>
+          <p class="subtitle">Use these exactly from the team project folder on the server.</p>
+        </div>
+        
+        <div class="mini-grid">
+            <div class="mini-card">
+              <h3>FastAPI</h3>
+              <pre><code>Start-Process &quot;.\.venv\Scripts\python.exe&quot; -ArgumentList &quot;-m&quot;,&quot;uvicorn&quot;,&quot;app.main:app&quot;,&quot;--host&quot;,&quot;0.0.0.0&quot;,&quot;--port&quot;,&quot;8101&quot; </code></pre>
+            </div>
+            
+            <div class="mini-card">
+              <h3>Flask</h3>
+              <pre><code>Start-Process &quot;.\.venv\Scripts\python.exe&quot; -ArgumentList &quot;-m&quot;,&quot;flask&quot;,&quot;run&quot;,&quot;--host=0.0.0.0&quot;,&quot;--port=8101&quot; </code></pre>
+            </div>
+            
+            <div class="mini-card">
+              <h3>Django</h3>
+              <pre><code>Start-Process &quot;.\.venv\Scripts\python.exe&quot; -ArgumentList &quot;manage.py&quot;,&quot;runserver&quot;,&quot;0.0.0.0:8101&quot; </code></pre>
+            </div>
+            
+            <div class="mini-card">
+              <h3>Streamlit</h3>
+              <pre><code>Start-Process &quot;.\.venv\Scripts\streamlit.exe&quot; -ArgumentList &quot;run&quot;,&quot;app.py&quot;,&quot;--server.address&quot;,&quot;0.0.0.0&quot;,&quot;--server.port&quot;,&quot;8101&quot; </code></pre>
+            </div>
+            </div>
+        
+        
+      </div>
+    </section>
+    
+    <section class="slide doc-grid" data-slide="10">
+      <div class="slide-meta">
+        <span class="eyebrow">Doc Slide 2</span>
+        <span class="slide-count">11 / 18</span>
+      </div>
+      <div class="slide-body">
+        <div class="headline-block">
+          <h1>Quick Start Commands for JS and Simple Apps</h1>
+          <p class="subtitle">These are the rest of the commands from the attached start-command sheet.</p>
+        </div>
+        
+        <div class="mini-grid">
+            <div class="mini-card">
+              <h3>Node / Express</h3>
+              <pre><code>Start-Process &quot;cmd.exe&quot; -ArgumentList &quot;/c&quot;,&quot;set HOST=0.0.0.0&amp;&amp; set PORT=8101&amp;&amp; npm start&quot; </code></pre>
+            </div>
+            
+            <div class="mini-card">
+              <h3>React / Vite</h3>
+              <pre><code>Start-Process &quot;cmd.exe&quot; -ArgumentList &quot;/c&quot;,&quot;set HOST=0.0.0.0&amp;&amp; set PORT=8101&amp;&amp; npm run dev -- --host 0.0.0.0 --port 8101&quot; </code></pre>
+            </div>
+            
+            <div class="mini-card">
+              <h3>Next.js</h3>
+              <pre><code>Start-Process &quot;cmd.exe&quot; -ArgumentList &quot;/c&quot;,&quot;set HOSTNAME=0.0.0.0&amp;&amp; set PORT=8101&amp;&amp; npm run dev -- -H 0.0.0.0 -p 8101&quot; </code></pre>
+            </div>
+            
+            <div class="mini-card">
+              <h3>Plain Python app.py</h3>
+              <pre><code>Start-Process &quot;.\.venv\Scripts\python.exe&quot; -ArgumentList &quot;app.py&quot; </code></pre>
+            </div>
+            </div>
+        
+        <ul class="bullet-list"><li>For another team, replace every 8101 with that team&#x27;s assigned port.</li><li>If the entry point is different, replace app.main:app, manage.py, app.py, or npm script accordingly.</li></ul>
+      </div>
+    </section>
+    
+    <section class="slide code" data-slide="11">
+      <div class="slide-meta">
+        <span class="eyebrow">Step 5</span>
+        <span class="slide-count">12 / 18</span>
+      </div>
+      <div class="slide-body">
+        <div class="headline-block">
+          <h1>Open the Live Link</h1>
+          <p class="subtitle">After the app starts, the browser should use the Tailscale IP and the assigned team port.</p>
+        </div>
+        
+        
+        
+      <div class="code-shell">
+        <div class="code-label">Browser check</div>
+        <pre><code>http://100.90.57.38:8107
+http://100.90.57.38:8107/health</code></pre>
+      </div>
+    
+        <ul class="bullet-list"><li>Do not open 0.0.0.0 in a browser. That is only the bind address.</li><li>Teams do not need the same Wi-Fi if they are on the same Tailscale network.</li></ul>
+      </div>
+    </section>
+    
+    <section class="slide warning" data-slide="12">
+      <div class="slide-meta">
+        <span class="eyebrow">Important Warning</span>
+        <span class="slide-count">13 / 18</span>
+      </div>
+      <div class="slide-body">
+        <div class="headline-block">
+          <h1>Use the URL for Testing, Do Not Hardcode It</h1>
+          <p class="subtitle">The IP and link we give today are deployment values, not values that should be frozen inside source code.</p>
+        </div>
+        
+        
+        
+        <ul class="bullet-list"><li>Do not hardcode localhost, 127.0.0.1, 100.90.57.38, or fixed test ports inside frontend or backend code.</li><li>Use the given link only for testing and current deployment access.</li><li>If your app needs an API base URL, keep it configurable through environment variables or one config file.</li><li>Relative paths are safer than fixed full URLs wherever possible.</li></ul>
+      </div>
+    </section>
+    
+    <section class="slide warning" data-slide="13">
+      <div class="slide-meta">
+        <span class="eyebrow">Step 6</span>
+        <span class="slide-count">14 / 18</span>
+      </div>
+      <div class="slide-body">
+        <div class="headline-block">
+          <h1>Validate the Payload Before POST</h1>
+          <p class="subtitle">These checks prevent avoidable 422 errors and keep the merge data trustworthy.</p>
+        </div>
+        
+        
+        
+        <ul class="bullet-list"><li>correct_answers + wrong_answers must be less than or equal to questions_attempted</li><li>questions_attempted must be less than or equal to total_questions</li><li>hints_used must be less than or equal to total_hints_embedded</li><li>topic_completion_ratio must stay between 0 and 1</li><li>session_status must be only completed or exited_midway</li><li>chapter_id must match your assigned chapter</li><li>timestamp should be a valid ISO datetime string</li></ul>
+      </div>
+    </section>
+    
+    <section class="slide code" data-slide="14">
+      <div class="slide-meta">
+        <span class="eyebrow">Step 7</span>
+        <span class="slide-count">15 / 18</span>
+      </div>
+      <div class="slide-body">
+        <div class="headline-block">
+          <h1>Send the Merge Payload at Session End</h1>
+          <p class="subtitle">The deployed chapter app should call the host merge endpoint when the learner finishes or exits.</p>
+        </div>
+        
+        
+        
+      <div class="code-shell">
+        <div class="code-label">Sample payload</div>
+        <pre><code>POST /merge/interactions
+{
+  &quot;student_id&quot;: &quot;student_204&quot;,
+  &quot;session_id&quot;: &quot;team7_demo_001&quot;,
+  &quot;chapter_id&quot;: &quot;grade7_triangle_properties&quot;,
+  &quot;timestamp&quot;: &quot;2026-04-07T11:15:00Z&quot;,
+  &quot;session_status&quot;: &quot;completed&quot;,
+  &quot;correct_answers&quot;: 8,
+  &quot;wrong_answers&quot;: 2,
+  &quot;questions_attempted&quot;: 10,
+  &quot;total_questions&quot;: 10,
+  &quot;hints_used&quot;: 1,
+  &quot;total_hints_embedded&quot;: 4,
+  &quot;retry_count&quot;: 1,
+  &quot;time_spent_seconds&quot;: 780,
+  &quot;topic_completion_ratio&quot;: 1.0
+}</code></pre>
+      </div>
+    
+        <ul class="bullet-list"><li>This is what the host merge system reads to decide next topic or support topic.</li><li>The team app owns the payload values. The host app owns the routing logic.</li></ul>
+      </div>
+    </section>
+    
+    <section class="slide warning" data-slide="15">
+      <div class="slide-meta">
+        <span class="eyebrow">Common Mistakes</span>
+        <span class="slide-count">16 / 18</span>
+      </div>
+      <div class="slide-body">
+        <div class="headline-block">
+          <h1>What Will Go Wrong If We Do Not Say It Out Loud</h1>
+          <p class="subtitle">Call these out clearly while presenting.</p>
+        </div>
+        
+        
+        
+        <ul class="bullet-list"><li>Using the Gmail inside SSH instead of the team username</li><li>Trying to use a laptop file path from inside the remote SSH terminal</li><li>Uploading to the wrong Windows path</li><li>Opening 0.0.0.0 in the browser</li><li>Thinking the password is not being typed because nothing appears on screen</li><li>Forgetting to change the port for the correct team</li></ul>
+      </div>
+    </section>
+    
+    <section class="slide final" data-slide="16">
+      <div class="slide-meta">
+        <span class="eyebrow">Final Slide</span>
+        <span class="slide-count">17 / 18</span>
+      </div>
+      <div class="slide-body">
+        <div class="headline-block">
+          <h1>What Every Team Must Remember</h1>
+          <p class="subtitle">If they remember these five points, the deployment part will go smoothly.</p>
+        </div>
+        
+        
+        
+        <ul class="bullet-list"><li>Use Gmail for Tailscale and team credentials for SSH.</li><li>Upload from the local terminal with scp.</li><li>Work only in the assigned team folder.</li><li>Start the app on 0.0.0.0 and the assigned port.</li><li>Send session-end data to POST /merge/interactions.</li></ul>
+      </div>
+    </section>
+    
+    <section class="slide code" data-slide="17">
+      <div class="slide-meta">
+        <span class="eyebrow">API Final Slide</span>
+        <span class="slide-count">18 / 18</span>
+      </div>
+      <div class="slide-body">
+        <div class="headline-block">
+          <h1>GET, POST, and Merge APIs We Will Use Tomorrow</h1>
+          <p class="subtitle">This is the exact API picture teams need: what they call, what they send, and what the host returns.</p>
+        </div>
+        <div class="column-grid">
+            <div class="column-card">
+              <h3>GET APIs</h3>
+              <ul><li>GET http://100.90.57.38:8200/health</li><li>GET http://100.90.57.38:8200/merge/chapters</li><li>GET http://100.90.57.38:8200/merge/recommendations/student_204</li><li>GET http://100.90.57.38:8200/merge/next-chapter/student_204</li></ul>
+              
+            </div>
+            
+            <div class="column-card">
+              <h3>POST APIs</h3>
+              <ul><li>POST http://100.90.57.38:8200/merge/interactions</li><li>POST http://100.90.57.38:8200/demo/student-session</li><li>GET tells us what the host knows.</li><li>POST sends the session data from the team app back to the host.</li></ul>
+              
+            </div>
+            </div>
+        <div class="mini-grid">
+            <div class="mini-card">
+              <h3>GET /health</h3>
+              <pre><code>{
+  &quot;status&quot;: &quot;ok&quot;
+}</code></pre>
+            </div>
+            
+            <div class="mini-card">
+              <h3>GET /merge/next-chapter/{student_id}</h3>
+              <pre><code>{
+  &quot;decision_type&quot;: &quot;advance&quot;,
+  &quot;predicted_next_chapter_id&quot;: &quot;grade7_perimeter_area&quot;,
+  &quot;predicted_next_chapter_name&quot;: &quot;Perimeter and Area&quot;
+}</code></pre>
+            </div>
+            
+            <div class="mini-card">
+              <h3>GET /merge/recommendations/{student_id}</h3>
+              <pre><code>{
+  &quot;needs_support&quot;: true,
+  &quot;recommendations&quot;: [&quot;grade7_rational_numbers&quot;],
+  &quot;weak_subtopics&quot;: [&quot;signed operations&quot;]
+}</code></pre>
+            </div>
+            
+            <div class="mini-card">
+              <h3>POST /merge/interactions</h3>
+              <pre><code>{
+  &quot;status&quot;: &quot;created&quot;,
+  &quot;student_id&quot;: &quot;student_204&quot;,
+  &quot;chapter_id&quot;: &quot;grade7_triangle_properties&quot;
+}</code></pre>
+            </div>
+            </div>
+        
+      <div class="code-shell">
+        <div class="code-label">How teams usually send the merge payload</div>
+        <pre><code>curl -X POST http://100.90.57.38:8200/merge/interactions ^
+  -H &quot;Content-Type: application/json&quot; ^
+  -d &quot;{
+    \&quot;student_id\&quot;: \&quot;student_204\&quot;,
+    \&quot;session_id\&quot;: \&quot;team7_demo_001\&quot;,
+    \&quot;chapter_id\&quot;: \&quot;grade7_triangle_properties\&quot;,
+    \&quot;timestamp\&quot;: \&quot;2026-04-08T11:15:00Z\&quot;,
+    \&quot;session_status\&quot;: \&quot;completed\&quot;,
+    \&quot;correct_answers\&quot;: 8,
+    \&quot;wrong_answers\&quot;: 2,
+    \&quot;questions_attempted\&quot;: 10,
+    \&quot;total_questions\&quot;: 10,
+    \&quot;hints_used\&quot;: 1,
+    \&quot;total_hints_embedded\&quot;: 4,
+    \&quot;retry_count\&quot;: 1,
+    \&quot;time_spent_seconds\&quot;: 780,
+    \&quot;topic_completion_ratio\&quot;: 1.0
+  }&quot; </code></pre>
+      </div>
+    
+        <ul class="bullet-list"><li>GET is for checking status and reading routing results.</li><li>POST /merge/interactions is the main handoff from every deployed chapter app to the host.</li><li>After POST succeeds, the host can answer recommendations and next-chapter requests for that student.</li></ul>
+      </div>
+    </section>
+    
+      </div>
+      <div class="controls">
+        <div class="control-text" id="control-text">Use Next / Back or arrow keys</div>
+        <div class="button-row">
+          <button class="nav-btn secondary" id="prev-btn" type="button">Back</button>
+          <button class="nav-btn primary" id="next-btn" type="button">Next</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const dotList = document.getElementById("dot-list");
+    const progressBar = document.getElementById("progress-bar");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+    const controlText = document.getElementById("control-text");
+    let currentIndex = 0;
+
+    slides.forEach((slide, index) => {
+      const dot = document.createElement("button");
+      dot.className = "dot";
+      dot.type = "button";
+      dot.title = `Slide ${index + 1}`;
+      dot.addEventListener("click", () => showSlide(index));
+      dotList.appendChild(dot);
+    });
+
+    function showSlide(index) {
+      currentIndex = Math.max(0, Math.min(index, slides.length - 1));
+      slides.forEach((slide, i) => slide.classList.toggle("active", i === currentIndex));
+      Array.from(dotList.children).forEach((dot, i) => dot.classList.toggle("active", i === currentIndex));
+      progressBar.style.width = `${((currentIndex + 1) / slides.length) * 100}%`;
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex === slides.length - 1;
+      controlText.textContent = `Slide ${currentIndex + 1} of ${slides.length}`;
+      location.hash = `slide-${currentIndex + 1}`;
+    }
+
+    prevBtn.addEventListener("click", () => showSlide(currentIndex - 1));
+    nextBtn.addEventListener("click", () => showSlide(currentIndex + 1));
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") {
+        event.preventDefault();
+        showSlide(currentIndex + 1);
+      }
+      if (event.key === "ArrowLeft" || event.key === "PageUp") {
+        event.preventDefault();
+        showSlide(currentIndex - 1);
+      }
+    });
+
+    const hashMatch = location.hash.match(/slide-(\d+)/);
+    showSlide(hashMatch ? Number(hashMatch[1]) - 1 : 0);
+  </script>
+</body>
+</html>

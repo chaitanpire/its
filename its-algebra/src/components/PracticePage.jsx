@@ -31,6 +31,7 @@ import ProgressBar from './ProgressBar.jsx';
 import HintPanel from './HintPanel.jsx';
 import AdaptiveInsightPanel from './AdaptiveInsightPanel.jsx';
 import { analyzeAndAdapt } from '../adaptiveEngine/index.js';
+import { sendSessionToMerge } from '../mergeApi.js';
 
 export default function PracticePage({ its }) {
   const {
@@ -49,12 +50,18 @@ export default function PracticePage({ its }) {
     startLearn,
     goToDashboard,
     learnerState,
+    sessionLog,
     adaptiveDifficulty,
     difficultyMessage,
     clearDifficultyMessage,
     SESSION_QUESTION_LIMIT,
     hasNextQuestion,
   } = its;
+
+  const handleExitToDashboard = () => {
+    sendSessionToMerge(learnerState, currentNodeId, 'exited_midway', sessionLog);
+    goToDashboard();
+  };
 
   const { node, state } = getNodeInfo(currentNodeId);
   const question = getCurrentQuestion();
@@ -175,7 +182,7 @@ export default function PracticePage({ its }) {
     <div className="practice-page">
       {/* ── Nav ── */}
       <div className="page-nav">
-        <button className="btn btn-ghost btn-sm" onClick={goToDashboard}>← Dashboard</button>
+        <button className="btn btn-ghost btn-sm" onClick={handleExitToDashboard}>← Dashboard</button>
         <div className="node-breadcrumb">
           <span className="node-pill" style={{ background: node.color + '22', color: node.color }}>
             {node.id}
@@ -349,7 +356,12 @@ function FeedbackPanel({ feedback, nodeColor }) {
 // Practice Complete Screen
 // ─────────────────────────────────────────────
 function PracticeComplete({ its, node, state }) {
-  const { goToDashboard, startPractice, startLearn, currentNodeId, learnerState } = its;
+  const { goToDashboard, startPractice, startLearn, currentNodeId, learnerState, sessionLog } = its;
+
+  // Send completed payload once when this screen mounts.
+  useEffect(() => {
+    sendSessionToMerge(learnerState, currentNodeId, 'completed', sessionLog);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!node) {
     return (
